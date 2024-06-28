@@ -45,6 +45,7 @@ export default function HomePage() {
             </a>
           </div>
         </nav>
+        <MobileNav sideBarState={mobileMenuOpen} setSideBarState={setMobileMenuOpen}/>
       </header>
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
