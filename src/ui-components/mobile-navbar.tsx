@@ -2,32 +2,33 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export const pageList = [
   {
     id: 1,
     name: 'About',
-    href: '#'
+    href: '/about'
   },
   {
     id: 2,
     name: 'Programs',
-    href: '#'
+    href: '/programs'
   },
   {
     id: 3,
     name: 'Projects',
-    href: '#'
+    href: '/projects'
   },
   {
     id: 4,
-    name: 'Gallery',
-    href: '#'
+    name: 'Blogs',
+    href: '/blogs'
   },
   {
     id: 5,
-    name: 'Articles',
-    href: '#'
+    name: 'Contact',
+    href: '/contact'
   },
   // More pages...
 ]
@@ -72,9 +73,7 @@ export default function MobileNav({ sideBarState, setSideBarState } : { sideBarS
                                 {pageList.map((page) => (
                                 <li key={page.id} className="flex py-3">
                                     <div className="ml-4 flex flex-1 flex-col">
-                                        <div>
-                                            <p className="text-sm text-gray-500">{page.name}</p>
-                                        </div>
+                                      <Link href={page.href} className="text-sm text-gray-500">{page.name}</Link>
                                     </div>
                                 </li>
                                 ))}
