@@ -8,7 +8,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
+        <header className="absolute inset-x-0 top-0 z-50 max-w-7xl m-auto">
             <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <div className="-m-1.5 p-1.5">
@@ -16,8 +16,7 @@ export default function Header() {
                         <Link href="/">
                             <img
                                 className="h-4 w-auto -mt-2"
-                                src="https://theupfolio.com/statics/img/Icons/logo.png"
-                                // src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                src="/svg/main-logo.svg"
                                 alt=""
                             />
                         </Link>
@@ -35,13 +34,13 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {pageList.map((page) => (
-                        <Link key={page.name} href={page.href} className="text-sm font-semibold leading-6 text-gray-900">
+                        <Link key={page.name} href={page.href} className="text-md font-light leading-6 text-gray-900">
                             {page.name}
                         </Link>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="/join-our-community" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/join-our-community" className="text-md font-light leading-6 text-gray-900">
                         Join our community <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
