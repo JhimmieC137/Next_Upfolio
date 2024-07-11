@@ -8,7 +8,7 @@ export default function MainLayout({ children } : { children: React.ReactNode })
       <div className=" bg-white min-h-screen">
         <div className='h-screen flex flex-col justify-between'>
           <Header/>
-          <div className='h-screen max-w-screen-2xl'>
+          <div className='max-w-screen-2xl'>
             {children}
           </div>
           <Footer/>
