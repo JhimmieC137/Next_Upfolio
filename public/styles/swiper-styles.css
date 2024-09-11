@@ -36,15 +36,15 @@
   position: absolute;
   top: initial;
   bottom: 3rem;
-  color: rgb(70, 70, 70);
+  color: rgb(214, 214, 214);
   font-size: xx-large;
   transition: 0.3s ease;
 }
 
 .rewind .swiper-button-prev:hover,
 .rewind .swiper-button-next:hover {
-    background-color: rgb(0, 18, 26);
-    color:#f5f5f5;
+    background-color: rgb(8 145 178 / 80%);
+    color:#fdfcfc;
 }
 .rewind .swiper-button-next {
   width: 6rem;

@@ -6,9 +6,9 @@ export default function AccordionItem ({ children, className, value, ...props } 
   return (<Accordion.Item
     value={value}
     className={
-      `focus-within:shadow-gray-600 mt-px overflow-hidden first:mt-0 focus-within:relative focus-within:z-10
-      border-y-2 border-y-gray-100 focus-within:border-y-cyan-600 ease-in-out duration-1000
-      ${className}
+      `focus-within:shadow-white mt-px overflow-hidden first:mt-0 focus-within:relative focus-within:z-10
+        border-y-2 border-y-zinc-400 focus-within:border-y-white ease-in-out duration-1000
+        ${className}
       `
   }
     {...props}

@@ -25,7 +25,7 @@ export default function Header() {
                 <div className="flex lg:hidden">
                     <button
                         type="button"
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-200"
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
@@ -34,13 +34,13 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {pageList.map((page) => (
-                        <Link key={page.name} href={page.href} className="text-md font-light leading-6 text-gray-900">
+                        <Link key={page.name} href={page.href} className="text-md font-light leading-6 text-zinc-200">
                             {page.name}
                         </Link>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="/join-our-community" className="text-md font-light leading-6 text-gray-900">
+                    <Link href="/join-our-community" className="text-md font-light leading-6 text-zinc-200">
                         Join our community <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
