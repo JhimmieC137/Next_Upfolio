@@ -40,7 +40,7 @@ export default function Footer() {
                 <div className="m-auto">
                     <ul className="flex flex-col md:flex-row justify-center items-center">
                         {pageList.map((page) => (
-                            <Link key={page.name} href={page.href} className="text-sm py-2 md:py-5 px-3 md:px-5 lg:px-7 xl:px-10 font-semibold leading-6 text-zinc-400 hover:text-pink-400 hover:underline">
+                            <Link key={page.name} href={page.href} className="text-sm py-2 md:py-5 px-3 md:px-5 lg:px-7 xl:px-10 font-semibold leading-6 text-zinc-400 hover:text-pink-400 ease-in-out duration-200">
                                 {page.name}
                             </Link>
                         ))}

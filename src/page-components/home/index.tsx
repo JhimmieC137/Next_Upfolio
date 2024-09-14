@@ -21,10 +21,12 @@ import { FAQs } from '@/contexts/faq-context';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { TestimonialContent } from '@/contexts/testimonial-context';
+import BlitzImage from '@/ui-components/BlitzImage';
 
 export default function HomePage() {
   const refToIntro = useRef<HTMLElement | null>(null);
   const refToServices = useRef<HTMLElement | null>(null);
+
 
   return (
     <main className="relative px-3 md:px6 pt-14 lg:px-8 min-h-full">
@@ -43,7 +45,7 @@ export default function HomePage() {
         />
       </div> */}
 
-      <section id="hero" className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl py-36 md:py-24 lg:py-24">
+      <section id="hero" className="h-screen mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl py-36 md:py-24 lg:py-24">
         <div className="hidden sm:mb-8 lg:mb-1 sm:flex sm:justify-center">
           {/* <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-zinc-300 ring-1 ring-zinc-300/80 hover:ring-zinc-300 ease-in-out duration-200">
             Announcing our next round of announcements.{' '}
@@ -65,17 +67,17 @@ export default function HomePage() {
           <p className="m-auto mt-6 text-md md:text-lg leading-6 md:leading-8 md:max-w-md lg:max-w-xl text-zinc-200">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt.
           </p>
-          <div 
-            className="mt-10 flex flex-col items-center justify-center gap-x-6"
-            
-          >
-            <div onClick={() => refToIntro.current?.scrollIntoView({ behavior: 'smooth' }) } className="cursor-pointer no-underline text-gray-900 ease-in-out duration-200">
-              {/* <img src="/gif/scroll-down.gif" alt="" className="h-32 w-auto"/> */}
-              <iframe src="https://lottie.host/embed/efa765d4-5819-4724-bf3c-081f17b66428/cZKIo7U85K.json"></iframe>
+          <div className="mt-10 flex flex-col items-center justify-center gap-x-6">
+            <div 
+              onClick={() => {document.getElementById("intro")?.scrollIntoView({behavior: 'smooth'}); console.log("clicked")}} 
+              className='cursor-pointer'  
+            >
+              <div 
+                className='h-14 w-8 rounded-2xl border-2 border-white'
+              >
+                <div className='elementor-button-text m-auto' />
+              </div>
             </div>
-            <p className="text-sm font-normal -mt-5 leading-6 text-zinc-300">
-              Learn more 
-            </p>
           </div>
         </div>
       </section>
@@ -106,8 +108,8 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-[7.7rem] text-yellow-300 font-normal">
                 We Are
               </h1>
-              <div className="w-full flex flex-row justify-end ml-16 mt-3">
-                <img className="ml-7" src="" alt="icon"/>
+              <div className="relative w-full flex flex-row justify-end ml-16 mt-3">
+                <img className="absolute left-0 -top-8 w-[20%]" src="/png/sparkles.png" alt="icon"/>
                 {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                 <h2 className="ml-10 text-4xl md:text-6xl lg:text-[7.7rem] text-cyan-600 font-normal">
                   Upfolio
@@ -124,12 +126,16 @@ export default function HomePage() {
           </div>
           <div className="flex flex-row w-full mt-20">
             <div className="flex flex-row justify-end items-end w-full ml-20">
-              <img className="h-8 mr-3 w-auto" src="/svg/star-doodle.svg" alt="" />
+              <img className="h-10 mt-1 w-auto" src="/png/star.png" alt="" />
               <p className="mx-2 text-2xl text-zinc-300 font-normal " >
                 100+ Community Members
               </p>
-              <img className="mx-2 h-20 w-auto opacity-70 -rotate-[18deg]" src="/svg/long-arrow-vector.svg" />
-              <img className="mx-4 rounded-[35px] max-w-[50%]" src="/png/community-collage.png" alt="" />
+              <img className="mx-2 h-20 w-auto -rotate-[18deg]" src="/png/star-arrow.png" />
+              <div className='relative w-full max-w-[50%]'>
+                <img className='w-[15%] absolute -z-10 -top-5 -left-5' src='/png/pic_frame_1.png'/>
+                <img className='w-[18%] absolute -bottom-10 -right-12 -rotate-180' src='/png/pic_frame_1.png'/>
+                <img className="mx-4 rounded-[35px] max-w-full border-[5px] border-white/10" src="/png/community-collage.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -146,8 +152,8 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-[7.7rem] text-yellow-300 font-normal">
                 Grow With
               </h1>
-              <div className="w-full flex flex-row justify-end ml-16 mt-3">
-                <img className="ml-7" src="" alt="icon"/>
+              <div className="relative w-full flex flex-row justify-end ml-16 mt-3">
+                <img className="absolute -left-7 -top-10 w-[19%]" src="/png/meteor.png" alt="icon"/>
                 {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                 <h2 className="ml-10 text-4xl md:text-6xl lg:text-[7.7rem] text-cyan-600 font-normal">
                   Our Services
@@ -236,8 +242,8 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-[7.7rem] text-yellow-300 font-normal">
                 Getting
               </h1>
-              <div className="w-full flex flex-row justify-end ml-16 mt-3">
-                <img className="ml-7" src="" alt="icon"/>
+              <div className="relative w-full flex flex-row justify-end ml-16 mt-3">
+                <img className="absolute -left-24 -top-10 w-[35%] -rotate-[40deg]" src="/png/checklist.png" alt="icon"/>
                 {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                 <h2 className="ml-10 text-4xl md:text-6xl lg:text-[7.7rem] text-cyan-600 font-normal">
                   Started
@@ -281,7 +287,13 @@ export default function HomePage() {
               </div> */}
               <div className="w-full max-w-[32rem] text-left ml-7">
                 <div className='flex justify-end'>
-                  <img className="rounded-[32px] w-full" src="/jpg/community-one.jpg"/>
+                  <BlitzImage
+                    child={
+                      <div className={`w-full max-w-full`}>
+                        <img className="rounded-bl-[32px] rounded-tr-[32px] w-full border-[3px] border-white/5" src="/jpg/community-one.jpg"/>
+                      </div>
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -322,7 +334,13 @@ export default function HomePage() {
               </div> */}
               <div className="w-full max-w-[32rem] text-left mr-7">
                 <div className='flex justify-start '>
-                  <img className="rounded-[32px] w-full" src="/png/programs.png"/>
+                  <BlitzImage
+                    child={
+                      <div className={`w-full max-w-full`}>
+                        <img className="rounded-bl-[32px] rounded-tr-[32px] w-full border-[3px] border-white/5" src="/png/programs.png"/>
+                      </div>
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -363,7 +381,13 @@ export default function HomePage() {
               </div> */}
               <div className="w-full max-w-[32rem] text-left ml-7">
                 <div className='flex justify-end'>
-                  <img className="rounded-[32px] w-full" src="/jpg/project.jpg"/>
+                  <BlitzImage
+                    child={
+                      <div className={`w-full max-w-full`}>
+                        <img className="rounded-bl-[32px] rounded-tr-[32px] w-full border-[3px] border-white/5" src="/jpg/project.jpg"/>
+                      </div>
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -402,9 +426,15 @@ export default function HomePage() {
                   position = "fixed" 
                 />
               </div> */}
-              <div className="w-full max-w-[32rem] text-left mr-7">
+              <div className="w-full max-w-[35rem] text-left mr-7">
                 <div className='flex justify-start '>
-                  <img className="rounded-[32px] w-full" src="/jpg/volunteer.jpg"/>
+                  <BlitzImage
+                    child={
+                      <div className={`w-full max-w-full`}>
+                        <img className="rounded-bl-[32px] rounded-tr-[32px] w-full border-[3px] border-white/5" src="/jpg/volunteer.jpg"/>
+                      </div>
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -425,8 +455,8 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-[7.7rem] text-yellow-300 font-normal">
                 Hear From
               </h1>
-              <div className="w-full flex flex-row justify-end ml-16 mt-3">
-                <img className="ml-7" src="" alt="icon"/>
+              <div className="relative w-full flex flex-row justify-end ml-16 mt-3">
+                <img className="absolute -left-4 -top-8 w-[15%]" src="/png/speaker.png" alt="icon"/>
                 {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                 <h2 className="ml-10 text-4xl md:text-6xl lg:text-[7.7rem] text-cyan-600 font-normal">
                   Our Community
@@ -477,8 +507,8 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-[7.7rem] text-yellow-300 font-normal">
                 Frequent
               </h1>
-              <div className="w-full flex flex-row justify-end ml-16 mt-3">
-                <img className="ml-7" src="" alt="icon"/>
+              <div className="relative w-full flex flex-row justify-end ml-16 mt-3">
+                <img className="absolute -left-2 -top-14 w-[17%]" src="/png/question_mark.png" alt="icon"/>
                 {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                 <h2 className="ml-10 text-4xl md:text-6xl lg:text-[7.7rem] text-cyan-600 font-normal">
                   Questions
@@ -529,8 +559,8 @@ export default function HomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-[7.7rem] text-yellow-300 font-normal">
                 Our Blogs
               </h1>
-              <div className="w-full flex flex-row justify-end ml-16 mt-3">
-                <img className="ml-7" src="" alt="icon"/>
+              <div className="relative w-full flex flex-row justify-end ml-16 mt-3">
+                <img className="absolute -left-0 -top-7 w-[25%]" src="/png/thought.png" alt="icon"/>
                 {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                 <h2 className="ml-10 text-4xl md:text-6xl lg:text-[7.7rem] text-cyan-600 font-normal">
                   For You

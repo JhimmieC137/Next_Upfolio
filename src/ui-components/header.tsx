@@ -34,14 +34,14 @@ export default function Header() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {pageList.map((page) => (
-                        <Link key={page.name} href={page.href} className="text-md font-light leading-6 text-zinc-200">
+                        <Link key={page.name} href={page.href} className="text-md font-normal ease-in-out duration-300 leading-6 text-zinc-200 link-underline link-underline-black ">
                             {page.name}
                         </Link>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="/join-our-community" className="text-md font-light leading-6 text-zinc-200">
-                        Join our community <span aria-hidden="true">&rarr;</span>
+                    <Link href="/join-our-community" className="w-[70%] text-center text-md font-bold leading-6 text-pink-400 hover:text-zinc-200 rounded-full border-2 border-pink-400 py-3 px-6 hover:bg-pink-700 hover:border-pink-700 ease-in-out duration-300 group">
+                        Join our community <span className='ml-1' aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
             </nav>
