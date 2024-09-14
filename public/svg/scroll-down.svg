@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="39.95417"
+   height="63.150608"
+   viewBox="0 0 246.717 63.150608"
+   version="1.1"
+   style="clip-rule:evenodd;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+   id="svg4"
+   sodipodi:docname="fd1da6b74057ed756f8c205d65339e83.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" />
+  <path
+     id="wheel"
+     d="m 123.359,-929.35 v 72.843"
+     style="fill:none;stroke:#ffffff;stroke-width:20px" />
+  <path
+     id="mouse"
+     d="m 236.717,-885.766 c 0,-62.565 -50.794,-113.359 -113.358,-113.359 C 60.794,-999.125 10,-948.331 10,-885.766 v 143.237 c 0,62.565 50.794,113.359 113.359,113.359 62.564,0 113.358,-50.794 113.358,-113.359 z"
+     style="fill:none;stroke:#ffffff;stroke-width:20px" />
+</svg>

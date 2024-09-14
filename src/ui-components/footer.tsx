@@ -7,27 +7,27 @@ import Link from "next/link";
 const socialLinks = [
     {
         name: "Twitter",
-        icon: <FaXTwitter className="text-2xl mx-7 text-gray-400 hover:text-gray-700"/>,
+        icon: <FaXTwitter className="text-2xl mx-7 text-gray-400 hover:text-white ease-in-out duration-200"/>,
         link: "https://x.com/Upfolio_"
     },
     {
         name: "Instagram",
-        icon: <FaInstagram className="text-2xl mx-7 text-gray-400 hover:text-gray-700"/>,
+        icon: <FaInstagram className="text-2xl mx-7 text-gray-400 hover:text-white ease-in-out duration-200"/>,
         link: "https://www.instagram.com/upfolio_/"
     },
     {
         name: "WhatsApp",
-        icon: <FaWhatsapp className="text-2xl mx-7 text-gray-400 hover:text-gray-700"/>,
+        icon: <FaWhatsapp className="text-2xl mx-7 text-gray-400 hover:text-white ease-in-out duration-200"/>,
         link: "https://api.whatsapp.com/send?phone=2349067053686"
     },
     {
         name: "Mail",
-        icon: <TbMail className="text-2xl mx-7 text-gray-400 hover:text-gray-700"/>,
+        icon: <TbMail className="text-2xl mx-7 text-gray-400 hover:text-white ease-in-out duration-200"/>,
         link: "mailto:hello@theupfolio.com"
     },
     {
         name: "LinkTree",
-        icon: <TbBrandLinktree className="text-2xl mx-7 text-gray-400 hover:text-gray-700"/>,
+        icon: <TbBrandLinktree className="text-2xl mx-7 text-gray-400 hover:text-white ease-in-out duration-200"/>,
         link: "https://linktr.ee/Upfolio"
     },
 ]
@@ -40,7 +40,7 @@ export default function Footer() {
                 <div className="m-auto">
                     <ul className="flex flex-col md:flex-row justify-center items-center">
                         {pageList.map((page) => (
-                            <Link key={page.name} href={page.href} className="text-sm py-2 md:py-5 px-3 md:px-5 lg:px-7 xl:px-10 font-semibold leading-6 text-gray-500 hover:underline">
+                            <Link key={page.name} href={page.href} className="text-sm py-2 md:py-5 px-3 md:px-5 lg:px-7 xl:px-10 font-semibold leading-6 text-zinc-400 hover:text-pink-400 ease-in-out duration-200">
                                 {page.name}
                             </Link>
                         ))}
