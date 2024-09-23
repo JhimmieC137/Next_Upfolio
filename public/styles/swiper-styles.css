@@ -64,6 +64,40 @@
     background-color: rgb(3 104 141 / 8%);
 }
 
+@media screen and (max-width: 767px) {
+  .rewind .swiper-button-prev {
+      left: initial;
+      right: 6.2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: rgb(3 104 141 / 8%);
+  }
+
+  .rewind .swiper-button-next {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(3 104 141 / 8%);
+    border-radius: 50%;
+    left: initial;
+    right: 3rem;
+  }
+
+  .fade .swiper-button-prev,
+  .fade .swiper-button-next,
+  .rewind .swiper-button-prev,
+  .rewind .swiper-button-next {
+    position: absolute;
+    top: initial;
+    bottom: 3rem;
+    color: rgb(214, 214, 214);
+    font-size: large;
+    transition: 0.3s ease;
+  }
+
+
+}
+
 
 /* fade */
 

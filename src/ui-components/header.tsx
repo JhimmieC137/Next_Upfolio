@@ -8,9 +8,9 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50 max-w-7xl m-auto">
+        <header className="absolute inset-x-0 top-0 z-50 xl:max-w-full 2xl:max-w-[85%] m-auto w-full">
             <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
+                <div className="flex md:flex-1">
                     <div className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
                         <Link href="/">
@@ -39,9 +39,9 @@ export default function Header() {
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link href="/join-our-community" className="w-[70%] text-center text-md font-bold leading-6 text-pink-400 hover:text-zinc-200 rounded-full border-2 border-pink-400 py-3 px-6 hover:bg-pink-700 hover:border-pink-700 ease-in-out duration-300 group">
-                        Join our community <span className='ml-1' aria-hidden="true">&rarr;</span>
+                <div className="hidden lg:flex md:flex-1 lg:justify-end">
+                    <Link href="/join-our-community" className="md:w-[85%] xl:w-[65%] 2xl:w-[50%] text-center text-md font-bold leading-6 text-pink-400 hover:text-zinc-200 rounded-full border-2 border-pink-400 py-3 px-3 hover:bg-pink-700 hover:border-pink-700 ease-in-out duration-300 group">
+                        Join our community <span className='ml-1 hidden xl:inline-block' aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
             </nav>

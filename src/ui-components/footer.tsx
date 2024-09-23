@@ -34,8 +34,10 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col justify-between">
+        <footer className="flex flex-col items-center justify-center">
+            
             <div className="w-full py-7">
+
                 {/* nav links */}
                 <div className="m-auto">
                     <ul className="flex flex-col md:flex-row justify-center items-center">
