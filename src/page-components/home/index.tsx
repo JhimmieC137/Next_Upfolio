@@ -42,7 +42,7 @@ export default function HomePage() {
         {/* <Particle /> */}
       </div>
       <div className='max-w-screen-2xl m-auto'>
-        <div className='px-3 md:px6 pt-14 lg:px-8 min-h-full'>
+        <div className='px-2 lg:px-8 min-h-full'>
           {/* <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             aria-hidden="true"
@@ -62,7 +62,7 @@ export default function HomePage() {
             color={'#ffffff'}
             refresh
           /> */}
-          <section id="hero" className="h-screen flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl py-36 md:py-24 lg:py-24">
+          <section id="hero" className="h-screen flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-16 pb-20 md:pt-20 md:pb-24 lg:pb-24">
             {/* <div className="hidden sm:mb-8 lg:mb-1 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-zinc-300 ring-1 ring-zinc-300/80 hover:ring-zinc-300 ease-in-out duration-200">
                 Announcing our next round of announcements.{' '}

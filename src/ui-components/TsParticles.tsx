@@ -330,7 +330,7 @@ export default function TsParticles() {
               "mode": "delete",
               "value": 0
             },
-            "value": 5
+            "value": 6
           },
           "opacity": {
             "value": 0.15,

@@ -1,14 +1,38 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import MobileNav, { pageList } from '@/ui-components/mobile-navbar'
 import Link from 'next/link'
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [navbarColor, setNavbarColor] = useState("bg-none backdrop-blur-none");
+
+    useEffect(() => {
+        const updateNavbarColor = () => {
+            if (
+                document.documentElement.scrollTop > 119 ||
+                document.body.scrollTop > 119
+            ) {
+                setNavbarColor("backdrop-blur-sm bg-zinc-950/60 ");
+            } else if (
+                document.documentElement.scrollTop < 200 ||
+                document.body.scrollTop < 200
+            ) {
+                setNavbarColor("bg-none backdrop-blur-none");
+            }
+        };
+
+        window.addEventListener("scroll", updateNavbarColor);
+
+        return function cleanup() {
+            window.removeEventListener("scroll", updateNavbarColor);
+        };
+
+    });
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50 xl:max-w-full 2xl:max-w-[85%] m-auto w-full">
+        <header id='header' className={`${navbarColor} fixed lg:absolute inset-x-0 top-0 z-50 xl:max-w-full 2xl:max-w-[85%] m-auto w-full`}>
             <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex md:flex-1">
                     <div className="-m-1.5 p-1.5">
