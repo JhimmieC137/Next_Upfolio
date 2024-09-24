@@ -26,6 +26,7 @@ import BlitzImage from '@/ui-components/BlitzImage';
 import { ParticlesBounce } from '@tsparticles/engine';
 import TsParticles from '@/ui-components/TsParticles';
 import ScrollProgressBar from '@/ui-components/ProgressScrollBar';
+import Particle from '@/ui-components/Particles';
 
 export default function HomePage() {
   const refToJ = useRef<HTMLElement | null>(null);
@@ -38,6 +39,7 @@ export default function HomePage() {
       
       <div className='absolute -z-10 size-full'>
         <TsParticles />
+        {/* <Particle /> */}
       </div>
       <div className='max-w-screen-2xl m-auto'>
         <div className='px-3 md:px6 pt-14 lg:px-8 min-h-full'>
@@ -116,7 +118,7 @@ export default function HomePage() {
           {/******* Introduction Section *******/}
 
 
-          <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]  py-6 md:py-20 lg:py-16">
+          <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]  py-0 md:py-20 lg:py-16">
             <div className="w-full flex flex-col justify-start">
               <div className="flex flex-row justify-center md:justify-start ">
                 <div className="text-left max-w-6xl px-5">
@@ -164,7 +166,7 @@ export default function HomePage() {
 
           {/******* Services Section *******/}
 
-          <section ref={refToServices} id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] py-36 md:py-24 lg:py-16">
+          <section ref={refToServices} id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-36 md:mt-24 lg:py-16">
             <div className="w-full flex flex-col justify-start">
               <div className="flex flex-row justify-center md:justify-start ">
                 <div className="text-left md:max-w-6xl px-5">
@@ -180,7 +182,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-start items-start w-full xl:mt-44 md:mt-20 mt-14">
+              <div className="flex flex-col justify-start items-start w-full xl:mt-44 md:mt-20 mt-10">
                 
                 {/* -- Service 1 -- */} 
                 <div className="flex flex-row h-full justify-between w-full py-7">
@@ -254,7 +256,7 @@ export default function HomePage() {
 
           {/******* Getting Started *******/}
 
-          <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] py-36 md:py-24 lg:py-24">
+          <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-36 md:mt-24 lg:mt-24">
             <div className="w-full flex flex-col justify-start">
               <div className="flex flex-row justify-center md:justify-start ">
                 <div className="text-left max-w-6xl px-5">
@@ -270,7 +272,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center items-center w-full max-w-7xl mt-12 px-3">
+              <div className="flex flex-col justify-center items-center w-full max-w-7xl mt-0 md:mt-12 px-3">
                 
                 
                 {/*  Item 1  */}
@@ -480,7 +482,7 @@ export default function HomePage() {
 
           {/******* Testimonial Section *******/}
 
-          <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] py-36 md:py-24 lg:py-24">
+          <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-32 md:mt-24 ">
             <div className="w-full flex flex-col justify-start">
               <div className="flex flex-row justify-center md:justify-start ">
                 <div className="text-left max-w-6xl px-5">
@@ -496,7 +498,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="w-full  xl:mt-16">
+              <div className="w-full  xl:mt-16 md:mt-10 mt-0">
                 <div className="max-w-4xl m-auto">
                   <Swiper
                     modules={[Navigation]}
@@ -507,8 +509,8 @@ export default function HomePage() {
                   >
                     {TestimonialContent.map((p, index) => {
                       return (
-                        <SwiperSlide style={{"marginRight" : "0"}} className="p-px w-full mt-20 bg-gradient-to-br from-yellow-400 from-10% via-cyan-600 via-30% to-zinc-950 to-45% rounded-[2rem] md:rounded-[5rem]" key={index}>
-                          <div className='bg-zinc-950 w-full rounded-[calc(2rem-1px)] md:rounded-[calc(5rem-1px)] p-6 md:p-20 pb-8 md:pb-16 text-gray-300'>
+                        <SwiperSlide style={{"marginRight" : "0"}} className="p-px w-full mt-12 bg-gradient-to-br from-yellow-400 from-10% via-cyan-600 via-30% to-zinc-950 to-45% rounded-[2rem] md:rounded-[5rem]" key={index}>
+                          <div className='bg-zinc-950 w-full rounded-[calc(2rem-1px)] md:rounded-[calc(5rem-1px)] p-8 md:p-20 pb-8 md:pb-16 text-gray-300'>
                             <p className='text-[0.9rem] leading-[24px] md:text-2xl md:leading-10 text-zinc-300'>{p.info}</p>
                             <div className="flex justify-start w-full mt-7 md:mt-14">
                               <div className="flex justify-center ">
@@ -532,7 +534,7 @@ export default function HomePage() {
 
           {/******* FQ Section *******/}
 
-          <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] py-12 md:py-24 lg:py-24">
+          <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-20 md:mt-24">
             <div className="w-full flex flex-col justify-start">
               <div className="flex flex-row justify-center md:justify-start ">
                 <div className="text-left max-w-6xl px-5">
