@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import "../../public/styles/swiper-styles.css";
 import "../../public/styles/globals.css";
 import { ThemeProvider } from "./theme-provider";
+import type { Viewport } from 'next'
 import TsParticles from "@/ui-components/TsParticles";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +14,15 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: "Upfolio",
-  description: "",
+  description: " We are passionate about youth development via opportunities, resources for personal and professional development.",
+};
+
+ 
+export const viewport: Viewport = {
+  themeColor: '#09090b',
+  width: "device-width",
+  viewportFit: 'contain',
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({
