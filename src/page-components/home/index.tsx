@@ -29,7 +29,6 @@ import ScrollProgressBar from '@/ui-components/ProgressScrollBar';
 import Particle from '@/ui-components/Particles';
 
 export default function HomePage() {
-  const refToJ = useRef<HTMLElement | null>(null);
   const refToServices = useRef<HTMLElement | null>(null);
 
 
@@ -39,9 +38,8 @@ export default function HomePage() {
       
       <div className='absolute -z-10 size-full'>
         <TsParticles />
-        {/* <Particle /> */}
       </div>
-      <div className='max-w-screen-2xl m-auto'>
+      <div className='max-w-screen m-auto'>
         <div className='px-2 lg:px-8 min-h-full'>
           {/* <div
             className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -182,6 +180,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+              
               <div className="flex flex-col justify-start items-start w-full xl:mt-44 md:mt-20 mt-10">
                 
                 {/* -- Service 1 -- */} 
