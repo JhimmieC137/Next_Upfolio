@@ -36,30 +36,9 @@ export default function HomePage() {
     <main className="relative w-full">
       {/******* Hero Section *******/}
       
-      <div className='absolute -z-10 size-full'>
-        <TsParticles />
-      </div>
-      <div className='max-w-screen m-auto'>
+      <div className='w-full m-auto'>
         <div className='px-2 lg:px-8 min-h-full'>
-          {/* <div
-            className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-            aria-hidden="true"
-            >
-            <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#4690e4] to-[#77afee] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-              }}
-              />
-          </div> */}
-          {/* <Particles
-            className="absolute inset-0"
-            quantity={1000}
-            ease={50}
-            color={'#ffffff'}
-            refresh
-          /> */}
+          
           <section id="hero" className="h-screen flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-16 pb-20 md:pt-20 md:pb-24 lg:pb-24">
             {/* <div className="hidden sm:mb-8 lg:mb-1 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-zinc-300 ring-1 ring-zinc-300/80 hover:ring-zinc-300 ease-in-out duration-200">
@@ -504,7 +483,7 @@ export default function HomePage() {
                     loop={true}
                     spaceBetween={30}
                     navigation
-                    className="rewind "
+                    className="rewind"
                   >
                     {TestimonialContent.map((p, index) => {
                       return (
@@ -721,27 +700,6 @@ export default function HomePage() {
           </section>
 
           {/******* Blogs Section Ends *******/}
-
-          {/******* Newsletter Section Ends *******/}
-
-          <section className="w-full flex justify-center">
-            <div className="w-[95%] md:w-[50%] lg:w-[40%] flex flex-col justify-center items-center mx-auto">
-                <h2 className="text-lg text-center md:text-2xl mb-2">
-                    Newsletter
-                </h2>
-                <p className="text-sm text-center px-2 mb-6 ">
-                    Sign up to receive latest news and exclusive content
-                </p>
-                <div className="flex flex-col justify-between md:flex-row items-center w-full mb-6">
-                    <input type="email" placeholder="Enter your email" className="w-[80%] md:w-full mx-auto my-4 h-12 rounded-lg px-3 md:mr-2 text-sm text-white placeholder:text-zinc-600 bg-zinc-950 outline-zinc-700 outline-1 outline focus-within:outline-white focus-within:outline-2 "/>
-                    <Link href="/join-our-community" className="w-[50%] mx-auto md:m-0 text-center text-md font-bold leading-6 text-zinc-200 rounded-full md:rounded-lg md:ml-2 py-3 px-3 bg-pink-700 hover:bg-pink-600 ease-in-out duration-300 group">
-                        Subscribe
-                    </Link>
-                </div>
-            </div>
-          </section>
-
-          {/******* Newsletter Section Ends *******/}
 
         </div>
       </div>

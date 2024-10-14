@@ -1,15 +1,23 @@
+'use client'
+
 import TsParticles from "@/ui-components/TsParticles";
 import { AiOutlineRise } from "react-icons/ai";
+import { CiLinkedin } from "react-icons/ci";
+import { MdOutlineAlternateEmail } from "react-icons/md";
 import { PiChartLineUp } from "react-icons/pi";
 import { RiSeedlingFill, RiServiceFill } from "react-icons/ri";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import { teamMembers } from "@/contexts/team-context";
+import { FaArrowDown, FaArrowDownLong } from "react-icons/fa6";
+import Link from "next/link";
+import { BsArrowDown } from "react-icons/bs";
+import NumberCounter from "@/utils/numberCounter";
 
 export default function AboutPage() {
     return (
         <main className="w-full relative">
-            <div className='absolute -z-10 size-full'>
-                <TsParticles />
-            </div>
-            <div className='max-w-screen m-auto'>
+            <div className='max-w-screen m-auto overflow-hidden'>
                 <div className='px-2 lg:px-8 min-h-full'>
 
                     <section id="hero" className="relative h-[70vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-16 pb-20 md:pt-24 md:pb-20 lg:pb-14">
@@ -83,31 +91,39 @@ export default function AboutPage() {
                         </div>
                     </section>
 
-                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-20 lg:max-w-[1300px]  py-0 md:py-20 lg:py-16">
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 lg:max-w-[1300px]  py-0 md:py-20 lg:py-16">
                         <div className="w-5/6 p-2 m-auto">
                             <div className="w-full flex flex-row gap-4 justify-around m-auto">
                                 <div className="text-center text-zinc-200">
-                                    <h2 className="font-normal text-[2.8rem]">23+</h2>
+                                    <h2 className="font-normal text-[2.8rem] flex flex-row justify-center">
+                                        <NumberCounter n={110}/> +
+                                    </h2>
                                     <p className="text-base  mt-1">
                                         Community members
                                     </p>
                                 </div>
                                 <div className="text-center text-zinc-200">
-                                    <h2 className="font-normal text-[2.8rem]">23+</h2>
+                                    <h2 className="font-normal text-[2.8rem] flex flex-row justify-center">
+                                        <NumberCounter n={3}/> +
+                                    </h2>
                                     <p className="text-base  mt-1">
-                                        Community members
+                                        Projects
                                     </p>
                                 </div>
                                 <div className="text-center text-zinc-200">
-                                    <h2 className="font-normal text-[2.8rem]">23+</h2>
+                                    <h2 className="font-normal text-[2.8rem] flex flex-row justify-center">
+                                        <NumberCounter n={13}/> +
+                                    </h2>
                                     <p className="text-base  mt-1">
-                                        Community members
+                                        Programs
                                     </p>
                                 </div>
                                 <div className="text-center text-zinc-200">
-                                    <h2 className="font-normal text-[2.8rem]">23+</h2>
+                                    <h2 className="font-normal text-[2.8rem] flex flex-row justify-center">
+                                        <NumberCounter n={43}/> +
+                                    </h2>
                                     <p className="text-base  mt-1">
-                                        Community members
+                                        Volunteers
                                     </p>
                                 </div>
                             </div>
@@ -130,13 +146,13 @@ export default function AboutPage() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-5/6 m-auto mt-7 grid grid-flow-row grid-cols-3 gap-7">
+                            <div className="w-[90%] m-auto mt-7 grid grid-flow-row grid-cols-3 gap-7">
                                 <div className="bg-zinc-800/40 text-zinc-200 rounded-2xl p-7">
                                     <PiChartLineUp className="h-12 w-12 text-cyan-600" />
                                     <h2 className="text-white font-light text-[2.3rem] my-5">
                                         Something
                                     </h2>
-                                    <p className="">
+                                    <p className="mb-7">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. voluptate distinctio autem et beatae.
                                     </p>
                                 </div>
@@ -145,7 +161,7 @@ export default function AboutPage() {
                                     <h2 className="text-white font-light text-[2.3rem] my-5">
                                         Something
                                     </h2>
-                                    <p className="">
+                                    <p className="mb-7">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. voluptate distinctio autem et beatae.
                                     </p>
                                 </div>
@@ -154,14 +170,101 @@ export default function AboutPage() {
                                     <h2 className="text-white font-light text-[2.3rem] my-5">
                                         Something
                                     </h2>
-                                    <p className="">
+                                    <p className="mb-7">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. voluptate distinctio autem et beatae.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </section>
+ 
 
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-36 md:mt-24 lg:py-16">
+                        <div className="w-full flex flex-col justify-start relative">
+                            <div className="flex flex-row justify-center md:justify-start relative">
+                                <div className="text-left md:max-w-6xl px-5">
+                                    <h1 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
+                                        Our
+                                    </h1>
+                                    <div className="relative w-full flex flex-row justify-end ml-0 md:ml-10 xl:ml-16 -mt-5 md:-mt-7">
+                                        <img className="absolute -left-7 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/>
+                                        {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
+                                        <h2 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
+                                            Team
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="w-full mx-auto relative mt-14 ">
+                                <Swiper 
+                                    slidesPerView={3}
+                                    spaceBetween={60}
+                                    modules={[Navigation]}
+                                    navigation
+                                    className="overflow-visible multiple"
+                                >
+                                    {
+                                        teamMembers.map(el => {
+                                            return (
+                                                <SwiperSlide key={el.id} className="p-px mt-8 relative">
+                                                    <div className="flex flex-col items-center w-full">
+                                                        <div className="p-px w-full bg-gradient-to-br from-yellow-400 from-10% via-cyan-600 via-70% to-zinc-950 to-95% rounded-[2rem]">
+                                                            <img className="w-full rounded-[calc(2rem-1px)]" src={`/upfolio_team/${el.image}`} alt={`/upfolio_team/${el.name}`}/>
+                                                        </div>
+                                                        <div className="w-full flex justify-between p-2 mt-2">
+                                                            <div className="">
+                                                                <h5 className="font-semibold my-2 text-base text-cyan-600">
+                                                                    {el.team}
+                                                                </h5>
+                                                                <h3 className="font-light text-2xl text-zinc-300">
+                                                                    {el.name}
+                                                                </h3>
+                                                            </div>
+                                                            <div className="flex justify-around gap-2 items-center w-1/6">
+                                                                <CiLinkedin className="h-16 w-16 text-zinc-400"/>
+                                                                <MdOutlineAlternateEmail className="h-16 w-16 text-zinc-400"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </SwiperSlide>
+                                            )
+                                        })
+                                    }
+                                    
+                                </Swiper>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mb-52 mt-36 md:mt-24 lg:py-16">
+                        <div className="w-full flex flex-col items-center relative">
+                            <div className="flex flex-row justify-center relative">
+                                <div className="text-center md:max-w-6xl px-5">
+                                    <h1 className="text-center text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
+                                        Join Our
+                                    </h1>
+                                    <div className="relative w-full flex flex-row justify-center ml-0 -mt-5 md:-mt-7">
+                                        <img className="absolute -left-48 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/>
+                                        <h2 className="text-center text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
+                                            Workforce.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-16 w-full">
+                            <div className="w-1/6 mx-auto">
+                                <Link href={'/volunteer'} className="w-36 h-36 p-5 rounded-full bg-pink-700 hover:bg-pink-500 ease-in-out duration-200 flex flex-col items-center text-center cursor-pointer">
+                                    <div className="flex flex-col items-center w-full">
+                                        <FaArrowDown className="bouncing-arrow font-medium h-5 w-5 text-white"/>
+                                        <p className="relative text-xl font-medium text-white mt-3">
+                                            Volunteer with us
+                                        </p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </section>
 
 
                 </div>

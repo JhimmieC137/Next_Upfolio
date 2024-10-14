@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import "../../public/styles/swiper-styles.css";
 import "../../public/styles/globals.css";
 import { ThemeProvider } from "./theme-provider";
@@ -32,8 +33,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-zinc-950 text-zinc-200 w-full ${inter.className}`}>
-        {/* <TsParticles /> */}
+      <body className={`absolute bg-zinc-950 text-zinc-200 w-full ${inter.className}`}>
+        <TsParticles />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="w-full">
             {children}

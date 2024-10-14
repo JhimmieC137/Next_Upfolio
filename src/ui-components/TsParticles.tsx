@@ -753,7 +753,7 @@ export default function TsParticles() {
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={options}
-          className="absolute size-full"
+          className="absolute -z-20 size-full"
         />
       );
     }

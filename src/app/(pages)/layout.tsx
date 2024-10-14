@@ -6,8 +6,8 @@ import React from 'react';
 export default function MainLayout({ children } : { children: React.ReactNode }) {
   return (
     <>
-      <div className="min-h-screen w-full">
-        <div className='relative h-screen flex flex-col justify-between items-center w-full'>
+      <div className="w-full">
+        <div className='flex flex-col justify-between items-center w-full'>
           <Header/>
           <div className='w-full'>
             {children}
