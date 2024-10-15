@@ -1,5 +1,5 @@
 'use client'
-import { FaXTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa6";
+import { FaXTwitter, FaInstagram, FaWhatsapp, FaArrowDown } from "react-icons/fa6";
 import { TbBrandLinktree, TbMail } from "react-icons/tb";
 import { pageList } from "./mobile-navbar";
 import Link from "next/link";
@@ -35,6 +35,36 @@ const socialLinks = [
 export default function Footer() {
     return (
         <footer className="flex flex-col items-center justify-center w-full">
+
+                    <div className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mb-24 mt-36 md:mt-24 lg:py-16">
+                        <div className="w-full flex flex-col items-center relative">
+                            <div className="flex flex-row justify-center relative">
+                                <div className="text-center md:max-w-6xl px-5">
+                                    <h1 className="text-center text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
+                                        Work
+                                    </h1>
+                                    <div className="relative w-full flex flex-row justify-center ml-0 -mt-5 md:-mt-7">
+                                        <img className="absolute -left-48 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/>
+                                        <h2 className="text-center text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
+                                            With Us.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-16 w-full">
+                            <div className="w-1/6 mx-auto">
+                                <Link href={'/volunteer'} className="w-36 h-36 p-5 rounded-full bg-pink-700 hover:bg-pink-500 ease-in-out duration-200 flex flex-col items-center text-center cursor-pointer">
+                                    <div className="flex flex-col items-center w-full">
+                                        <FaArrowDown className="bouncing-arrow font-medium h-5 w-5 text-white"/>
+                                        <p className="relative text-xl font-medium text-white mt-3">
+                                            Get in touch
+                                        </p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
 
             {/******* Newsletter Section Ends *******/}
 
