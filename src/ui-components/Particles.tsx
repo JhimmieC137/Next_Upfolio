@@ -56,7 +56,7 @@ function hexToRgb(hex: string): number[] {
   return [red, green, blue];
 }
 
-const Particles: React.FC<ParticlesProps> = ({
+const Particle: React.FC<ParticlesProps> = ({
   className = "",
   quantity = 100,
   staticity = 50,
@@ -270,9 +270,9 @@ const Particles: React.FC<ParticlesProps> = ({
 
   return (
     <div className={className} ref={canvasContainerRef} aria-hidden="true">
-      <canvas ref={canvasRef} className="size-full h-screen" />
+      <canvas ref={canvasRef} className="size-full" />
     </div>
   );
 };
 
-export default Particles;
+export default Particle;

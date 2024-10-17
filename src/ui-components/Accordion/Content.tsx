@@ -12,6 +12,6 @@ export default function AccordionContent ({ children, className, ...props } : { 
     {...props}
     // ref={forwardedRef}
   >
-    <div className="py-[10px] max-w-4xl text-white leading-10">{children}</div>
+    <div className="py-[10px] max-w-4xl text-white leading-[1.6rem] md:leading-10">{children}</div>
   </Accordion.Content>)
 };

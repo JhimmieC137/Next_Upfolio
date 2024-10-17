@@ -40,7 +40,7 @@ export default function MobileNav({ sideBarState, setSideBarState } : { sideBarS
     <Dialog className="relative z-50 lg:hidden" open={sideBarState} onClose={setSideBarState}>
       <DialogBackdrop
         transition
-        className="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
+        className="fixed inset-0 bg-black bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
       />
 
       <div className="fixed inset-0 overflow-hidden">
@@ -50,14 +50,14 @@ export default function MobileNav({ sideBarState, setSideBarState } : { sideBarS
               transition
               className="pointer-events-auto w-screen max-w transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
             >
-              <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+              <div className="flex h-full flex-col overflow-y-scroll bg-zinc-950 shadow-xl">
                 <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                   <div className="flex items-start justify-between">
-                    <DialogTitle className="text-lg font-medium text-gray-900">Pages</DialogTitle>
+                    <DialogTitle className="text-lg font-medium text-white"></DialogTitle>
                     <div className="ml-3 flex h-7 items-center">
                       <button
                         type="button"
-                        className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
+                        className="relative -m-2 p-2 text-white hover:text-gray-500"
                         onClick={() => setSideBarState(false)}
                       >
                         <span className="absolute -inset-0.5" />
@@ -67,19 +67,29 @@ export default function MobileNav({ sideBarState, setSideBarState } : { sideBarS
                     </div>
                   </div>
 
-                    <div className="mt-8">
-                        <div className="flow-root">
-                            <ul role="list" className="-my-6 divide-y divide-gray-200">
-                                {pageList.map((page) => (
-                                <li key={page.id} className="flex py-3">
-                                    <div className="ml-4 flex flex-1 flex-col">
-                                      <Link href={page.href} className="text-sm text-gray-500">{page.name}</Link>
-                                    </div>
-                                </li>
-                                ))}
-                            </ul>
-                        </div>
+                  <div className="mt-8">
+                    <div className="flow-root">
+                      <ul role="list" className="-my-6 divide-y divide-white/20">
+                        {pageList.map((page) => (
+                        <li key={page.id} className="flex py-6">
+                          <div className="ml-4 flex flex-1 flex-col">
+                            <Link href={page.href} className="text-sm text-white">{page.name}</Link>
+                          </div>
+                        </li>
+                        ))}
+                      </ul>
                     </div>
+                  </div>
+
+                  <div className='fixed bottom-4 w-full'>
+                    <Link href="/" className='w-full'>
+                      <img
+                        className="h-4 w-auto m-auto -mt-2"
+                        src="/svg/main-logo.svg"
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </DialogPanel>

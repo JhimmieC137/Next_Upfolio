@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import "../../public/styles/swiper-styles.css";
 import "../../public/styles/globals.css";
 import { ThemeProvider } from "./theme-provider";
-import Particles from "@/ui-components/Particles";
+import type { Viewport } from 'next'
+import TsParticles from "@/ui-components/TsParticles";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +15,15 @@ export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: "Upfolio",
-  description: "",
+  description: " We are passionate about youth development via opportunities, resources for personal and professional development.",
+};
+
+ 
+export const viewport: Viewport = {
+  themeColor: '#09090b',
+  width: "device-width",
+  viewportFit: 'contain',
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({
@@ -23,16 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-zinc-950 text-zinc-200 ${inter.className}`}>
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          color={'#fffff'}
-          refresh
-        />
+      <body className={`absolute bg-zinc-950 text-zinc-200 w-full ${inter.className}`}>
+        <TsParticles />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <div className="w-full">
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

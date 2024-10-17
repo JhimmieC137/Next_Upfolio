@@ -14,19 +14,59 @@
 
 .fade .swiper-button-next::after,
 .fade .swiper-button-prev::after,
+.multiple .swiper-button-next::after,
+.multiple .swiper-button-prev::after,
 .rewind .swiper-button-next::after,
 .rewind .swiper-button-prev::after {
   content: '';
 }
 
 .fade .swiper-button-prev::before,
-.rewind .swiper-button-prev::before {
+.rewind .swiper-button-prev::before,
+.multiple .swiper-button-prev::before {
     content: '\276E';
 }
 
 .fade .swiper-button-next::before,
-.rewind .swiper-button-next::before {
+.rewind .swiper-button-next::before,
+.multiple .swiper-button-next::before {
     content: '\276F';
+}
+
+.multiple .swiper-button-next {
+  position: absolute;
+  top: 14rem;
+  bottom: 0;
+  color:#fdfcfc;
+  font-size: xx-large;
+  transition: 0.3s ease;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(8 145 178 / 80%);
+  border-radius: 50%;
+  left: initial;
+  right: -2rem;
+}
+
+.multiple .swiper-button-prev {
+  position: absolute;
+  top: 14rem;
+  bottom: 0;
+  color:#fdfcfc;
+  font-size: xx-large;
+  transition: 0.3s ease;
+  left: -2rem;
+  right: initial;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgb(8 145 178 / 80%);
+}
+
+.multiple .swiper-button-prev:hover,
+.multiple .swiper-button-next:hover {
+    background-color: rgb(8 145 178 / 80%);
+    color:#fdfcfc;
 }
 
 .fade .swiper-button-prev,
@@ -62,6 +102,40 @@
     height: 6rem;
     border-radius: 50%;
     background-color: rgb(3 104 141 / 8%);
+}
+
+@media screen and (max-width: 767px) {
+  .rewind .swiper-button-prev {
+      left: initial;
+      right: 6.2rem;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background-color: rgb(3 104 141 / 8%);
+  }
+
+  .rewind .swiper-button-next {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(3 104 141 / 8%);
+    border-radius: 50%;
+    left: initial;
+    right: 3rem;
+  }
+
+  .fade .swiper-button-prev,
+  .fade .swiper-button-next,
+  .rewind .swiper-button-prev,
+  .rewind .swiper-button-next {
+    position: absolute;
+    top: initial;
+    bottom: 3rem;
+    color: rgb(214, 214, 214);
+    font-size: large;
+    transition: 0.3s ease;
+  }
+
+
 }
 
 
