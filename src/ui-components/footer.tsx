@@ -44,7 +44,7 @@ export default function Footer() {
                                         Work
                                     </h1>
                                     <div className="relative w-full flex flex-row justify-center ml-0 -mt-5 md:-mt-7">
-                                        <img className="absolute -left-48 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/>
+                                        {/* <img className="absolute -left-48 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/> */}
                                         <h2 className="text-center text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
                                             With Us.
                                         </h2>
@@ -53,7 +53,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="mt-16 w-full">
-                            <div className="w-1/6 mx-auto">
+                            <div className="flex justify-center">
                                 <Link href={'/volunteer'} className="w-36 h-36 p-5 rounded-full bg-pink-700 hover:bg-pink-500 ease-in-out duration-200 flex flex-col items-center text-center cursor-pointer">
                                     <div className="flex flex-col items-center w-full">
                                         <FaArrowDown className="bouncing-arrow font-medium h-5 w-5 text-white"/>

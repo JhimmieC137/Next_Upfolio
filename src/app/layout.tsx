@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={`absolute bg-zinc-950 text-zinc-200 w-full ${inter.className}`}>
         <TsParticles />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="w-full">
+          <div className="w-full ">
             {children}
           </div>
         </ThemeProvider>

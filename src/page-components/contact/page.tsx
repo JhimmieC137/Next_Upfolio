@@ -44,7 +44,7 @@ export default function ContactPage() {
                                         </label>
                                         <div className="relative w-full">
                                             <PiPhoneLight className='absolute text-zinc-400/60 h-10 w-10 top-5 bottom-auto left-4 z-10' />
-                                            <input id="phone" type="text" placeholder="08000000000" className="relative placeholder:text-zinc-400/60 text-white/90 w-full pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-20" required/>
+                                            <input id="phone" type="text" placeholder="+234 8000000000" className="relative placeholder:text-zinc-400/60 text-white/90 w-full pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-20" required/>
                                         </div>
                                     </div>
                                     <div className="w-full my-5 flex flex-col">
