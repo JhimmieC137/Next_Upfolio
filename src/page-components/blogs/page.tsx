@@ -35,7 +35,7 @@ export default function BlogsPage() {
                     </section>
 
 
-                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-16 lg:mt-6 lg:py-16">
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] lg:max-w-[1300px] mt-20 lg:mt-6 lg:py-16">
                         
                         <div className="w-full flex flex-col justify-start">
                             <div className="flex flex-row justify-center md:justify-start ">
