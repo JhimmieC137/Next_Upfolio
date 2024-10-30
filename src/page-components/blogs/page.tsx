@@ -22,16 +22,10 @@ export default function BlogsPage() {
                     </section>
 
 
-                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]">
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 lg:max-w-[1300px]">
                         <div className="w-full mt-16 md:mt-0 lg:-mt-20">
-                            <img className="rounded-[1rem] lg:rounded-[2.5rem]" src="/jpg/project_meeting.jpg" alt="team_meeting"/>
+                            <img className="rounded-[1rem] lg:rounded-[2.5rem]" src="/jpg/blog.jpg" alt="team_meeting"/>
                         </div>
-                        {/* <div className="w-full flex justify-between">
-                            <h1>
-
-                            </h1>
-
-                        </div> */}
                     </section>
 
 

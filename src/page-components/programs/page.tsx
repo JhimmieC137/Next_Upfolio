@@ -21,7 +21,7 @@ export default function ProgramsPage() {
                     </section>
 
 
-                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]">
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 lg:max-w-[1300px]">
                         <div className="w-full mt-16 md:mt-0 lg:-mt-20">
                             <img className="rounded-[1rem] lg:rounded-[2.5rem]" src="/jpg/project_meeting.jpg" alt="team_meeting"/>
                         </div>
@@ -35,7 +35,7 @@ export default function ProgramsPage() {
                                     Information
                                 </h1>
                                 <div className="relative w-full flex flex-row justify-start ml-14 md:ml-20 xl:ml-16 -mt-5 md:-mt-7">
-                                    <img className="absolute -left-16 md:-left-24 -top-1 md:-top-5 lg:-top-5 w-[25%] md:w-[29%]" src="/png/meteor.png" alt="icon"/>
+                                    <img className="absolute -left-16 md:-left-24 -top-1 md:-top-5 lg:-top-5 w-[25%]  lg:w-[20%]" src="/png/meteor.png" alt="icon"/>
                                     {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                                     <h2 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
                                         Sessions
@@ -94,7 +94,7 @@ export default function ProgramsPage() {
                                     Capacity
                                 </h1>
                                 <div className="relative w-full flex flex-row justify-start ml-16 md:ml-20 xl:ml-16 -mt-5 md:-mt-7">
-                                    <img className="absolute -left-20 md:-left-24 -top-1 md:-top-5 lg:-top-5 w-[20%]" src="/png/meteor.png" alt="icon"/>
+                                    <img className="absolute -left-20 md:-left-24 -top-1 md:-top-5 lg:-top-5 w-[20%] lg:w-[18%]" src="/png/meteor.png" alt="icon"/>
                                     {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                                     <h2 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
                                         Development

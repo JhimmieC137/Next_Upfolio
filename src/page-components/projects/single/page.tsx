@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-export default function ProjectsPage() {
+export default function SingleProjectPage() {
     return (
         <main className="w-full relative">
             <div className='max-w-screen m-auto overflow-hidden'>
@@ -9,7 +9,7 @@ export default function ProjectsPage() {
                     <section id="hero" className="relative h-[60vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-24 lg:pb-14">
                         <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-5 flex justify-center">
                             <p className="text-md  text-zinc-200 font-light">
-                                Home/Projects
+                                Home/Projects/Single
                             </p>
                         </div>
                         <div className="text-center">
