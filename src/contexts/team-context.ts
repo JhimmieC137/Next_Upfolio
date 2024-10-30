@@ -77,7 +77,7 @@ export const informationSessions = [
     {
         id: 1,
         image: 'Discovering_Fully_Funded_Scholarships__Navigating_Them_With_Confidence.jpg',
-        title: 'Discovering Fully Funded_Scholarships Navigating Them With Confidence',
+        title: 'Discovering Fully Funded Scholarships',
         date: '',
         description: '',
     },

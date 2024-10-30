@@ -16,7 +16,7 @@ export default function AboutPage() {
             <div className='max-w-screen m-auto overflow-hidden'>
                 <div className='px-2 lg:px-8 min-h-full'>
 
-                    <section id="hero" className="relative h-[50vh] xl:h-[70vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-6 lg:pb-14">
+                    <section id="hero" className="relative h-[60vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-6 lg:pb-14 ">
                         <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-3 flex justify-center">
                             <p className="text-md  text-zinc-200 font-light">
                                 Home/About
@@ -31,12 +31,12 @@ export default function AboutPage() {
 
 
                     <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]">
-                        <div className="w-full mt-0 lg:-mt-20">
+                        <div className="w-full mt-16 md:mt-0 lg:-mt-20">
                             <img className="rounded-[1rem] lg:rounded-[2.5rem]" src="/jpg/team_meeting.jpg" alt="team_meeting"/>
                         </div>
                     </section>
 
-                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-20 lg:max-w-[1300px] py-20 md:py-20 lg:py-16">
+                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-24 xl:mt-20 lg:max-w-[1300px] py-0 md:py-20 lg:py-16">
                         <div className="flex flex-row justify-center md:justify-start ">
                             <div className="text-left md:max-w-6xl px-5">
                                 <h1 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
