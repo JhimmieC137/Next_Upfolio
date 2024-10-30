@@ -23,8 +23,8 @@ export default function ContactPage() {
 
 
                     <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px] flex flex-col lg:flex-row justify-between gap-10">
-                        <div className="w-full px-3 lg:px-0 lg:w-[83%]">
-                            <img className="w-full rounded-[1rem]" src="/jpg/contact.jpg" alt="contact_us"/>
+                        <div className="w-full px-3 lg:px-0 lg:w-[83%] flex justify-center lg:justify-end">
+                            <img className="w-full lg:w-[93%] rounded-[1rem]" src="/jpg/contact.jpg" alt="contact_us"/>
                         </div>
                         <form className="w-full px-2" action="">
                             <div className="w-full flex flex-col justify-between">
@@ -35,7 +35,7 @@ export default function ContactPage() {
                                         </label>
                                         <div className="relative w-full">
                                             <RxPerson className='absolute text-zinc-400/60 h-7 w-7 top-4 lg:h-10 lg:w-10 md:top-5 bottom-auto left-4 z-10' />
-                                            <input id="name" type="text" placeholder="John" className="relative placeholder:text-zinc-400/60 text-white/90 w-full pl-[3.8rem] md:pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-16 lg:h-20" required/>
+                                            <input id="name" type="text" placeholder="John" className="relative bg-zinc-950 placeholder:text-zinc-400/60 text-white/90 w-full pl-[3.8rem] md:pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-16 lg:h-20" required/>
                                         </div>
                                     </div>
                                     <div className="w-full my-5 flex flex-col">
@@ -44,7 +44,7 @@ export default function ContactPage() {
                                         </label>
                                         <div className="relative w-full">
                                             <PiPhoneLight className='absolute text-zinc-400/60 h-7 w-7 lg:h-10 md:w-10 top-5 bottom-auto left-4 z-10' />
-                                            <input id="phone" type="text" placeholder="+234 8000000000" className="relative placeholder:text-zinc-400/60 text-white/90 w-full pl-[3.8rem] md:pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-16 lg:h-20" required/>
+                                            <input id="phone" type="text" placeholder="+234 8000000000" className="relative bg-zinc-950 placeholder:text-zinc-400/60 text-white/90 w-full pl-[3.8rem] md:pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-16 lg:h-20" required/>
                                         </div>
                                     </div>
                                     <div className="w-full my-5 flex flex-col">
@@ -53,14 +53,14 @@ export default function ContactPage() {
                                         </label>
                                         <div className="relative w-full">
                                             <CiMail className='absolute  text-zinc-400/60 h-7 w-7  lg:h-10 md:w-10 top-5 bottom-auto left-4 z-10' />
-                                            <input id="email" type="text" placeholder="example@mail.com" className="relative placeholder:text-zinc-400/60 text-white/90 w-full pl-[3.8rem] md:pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-16 lg:h-20" required/>
+                                            <input id="email" type="text" placeholder="example@mail.com" className="relative bg-zinc-950 placeholder:text-zinc-400/60 text-white/90 w-full pl-[3.8rem] md:pl-[4.2rem] pr-4 text-[1.2rem] border border-zinc-600 rounded-[0.85rem] h-16 lg:h-20" required/>
                                         </div>
                                     </div>
                                     <div className="w-full my-5 flex flex-col">
                                         <label className="mb-3 pl-1 text-base lg:text-lg text-zinc-400" htmlFor="message">
                                             Your message
                                         </label>
-                                        <textarea id='message' rows={3} className="p-4 placeholder:text-zinc-400/60 text-white/90 text-[1.2rem] border border-zinc-600 rounded-[0.85rem]" placeholder="Please write here ... " required/>
+                                        <textarea id='message' rows={3} className="p-4 bg-zinc-950 placeholder:text-zinc-400/60 text-white/90 text-[1.2rem] border border-zinc-600 rounded-[0.85rem]" placeholder="Please write here ... " required/>
                                     </div>
                                 </div>
                                 <div className="w-full mt-2 lg:mt-0">

@@ -174,6 +174,10 @@ export default function AboutPage() {
                             <div className="w-full mx-auto relative mt-14 ">
                                 <Swiper 
                                     breakpoints={{
+                                        760: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 60,
+                                        },
                                         576: {
                                             slidesPerView: 2,
                                             spaceBetween: 20,
@@ -202,7 +206,7 @@ export default function AboutPage() {
                                                                 <h5 className="font-normal my-2 text-base text-cyan-600">
                                                                     {el.team}
                                                                 </h5>
-                                                                <h3 className="font-light m-0 text-xl lg:text-3xl text-zinc-300">
+                                                                <h3 className="font-light m-0 text-xl lg:text-2xl text-zinc-300">
                                                                     {el.name}
                                                                 </h3>
                                                             </div>
