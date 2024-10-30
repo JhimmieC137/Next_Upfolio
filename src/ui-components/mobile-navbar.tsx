@@ -73,7 +73,7 @@ export default function MobileNav({ sideBarState, setSideBarState } : { sideBarS
                         {pageList.map((page) => (
                         <li key={page.id} className="flex py-6">
                           <div className="ml-4 flex flex-1 flex-col">
-                            <Link href={page.href} className="text-sm text-white">{page.name}</Link>
+                            <Link href={page.href} onClick={() => setSideBarState(false)} className="text-sm text-white">{page.name}</Link>
                           </div>
                         </li>
                         ))}
