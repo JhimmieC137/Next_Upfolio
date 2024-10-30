@@ -33,7 +33,7 @@ export default function Header() {
 
     return (
         <header id='header' className={`${navbarColor} fixed lg:absolute inset-x-0 top-0 z-50 xl:max-w-full 2xl:max-w-[85%] m-auto w-full`}>
-            <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="flex items-center justify-between p-6 px-3 xl:px-8" aria-label="Global">
                 <div className="flex md:flex-1">
                     <div className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
@@ -46,7 +46,7 @@ export default function Header() {
                         </Link>
                     </div>
                 </div>
-                <div className="flex lg:hidden">
+                <div className="flex xl:hidden">
                     <button
                         type="button"
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-200"
@@ -56,16 +56,17 @@ export default function Header() {
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-12">
+                <div className="hidden xl:flex lg:gap-x-12">
                     {pageList.map((page) => (
                         <Link key={page.name} href={page.href} className="text-md font-normal ease-in-out duration-300 leading-6 text-zinc-200 link-underline link-underline-black ">
                             {page.name}
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:flex md:flex-1 lg:justify-end">
-                    <Link href="/join-our-community" className="md:w-[85%] xl:w-[65%] 2xl:w-[50%] text-center text-md font-bold leading-6 text-pink-400 hover:text-zinc-200 rounded-full border-2 border-pink-400 py-3 px-3 hover:bg-pink-700 hover:border-pink-700 ease-in-out duration-300 group">
-                        Join our community <span className='ml-1 hidden xl:inline-block' aria-hidden="true">&rarr;</span>
+                <div className="hidden xl:flex md:flex-1 lg:justify-end">
+                    <Link href="/join-our-community" className="md:w-[65%] 2xl:w-[50%] text-center text-md font-bold leading-6 text-pink-400 hover:text-zinc-200 rounded-full border-2 border-pink-400 py-3 px-3 hover:bg-pink-700 hover:border-pink-700 ease-in-out duration-300 group">
+                        Join our community
+                        {/* <span className='ml-1 hidden xl:inline-block' aria-hidden="true">&rarr;</span> */}
                     </Link>
                 </div>
             </nav>

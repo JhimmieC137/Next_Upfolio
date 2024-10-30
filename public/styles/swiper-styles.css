@@ -63,6 +63,28 @@
   background-color: rgb(8 145 178 / 80%);
 }
 
+@media screen and (max-width: 900px) {
+  .multiple .swiper-button-next {
+    right: 0.75rem
+  }
+  .multiple .swiper-button-prev {
+    left: 0.75rem
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .multiple .swiper-button-next {
+    right: 0.1rem;
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+  .multiple .swiper-button-prev {
+    left: 0.1rem; 
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+}
+
 .multiple .swiper-button-prev:hover,
 .multiple .swiper-button-next:hover {
     background-color: rgb(8 145 178 / 80%);
