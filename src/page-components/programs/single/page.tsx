@@ -31,9 +31,9 @@ export default function SingleProgramPage() {
                     </section>
 
 
-                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] md:mt-5 lg:mt-0 lg:max-w-[1300px] py-0 md:py-5 lg:py-10 flex flex-col md:flex-row justify-between">
+                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] px-2 md:px-0 mt-5 lg:mt-0 lg:max-w-[1300px] py-0 md:py-5 lg:py-10 flex flex-col md:flex-row justify-between">
                         <div className="flex flex-row justify-center md:justify-start ">
-                            <div className="text-left max-w-full lg:max-w-xl  pl-5 pr-0 lg:px-5">
+                            <div className="text-left max-w-full lg:max-w-xl pr-0 md:pl-5 lg:px-5">
                                 <p className="text-sm text-zinc-400/80 mb-2">
                                     Information Sessions  
                                 </p>
@@ -49,61 +49,61 @@ export default function SingleProgramPage() {
                         </div>
                         <div className="flex flex-row justify-end w-full lg:w-2/6 my-6 mt-8 md:my-0 px-2">
                             <div className="max-w-max pt-3">
-                                <div className="max-h-[5rem] max-w-[5rem] lg:max-h-20 lg:max-w-20 p-[5px] lg:p-2 rounded-[50%] border-2 border-zinc-400">
-                                    <IoLocationSharp className="p-0 lg:p-2 h-6 lg:h-10  w-auto text-zinc-400" />
+                                <div className="max-w-20 max-h-20 md:max-h-[5rem] md:max-w-[5rem] lg:max-h-20 lg:max-w-20 p-[5px] lg:p-2 rounded-[50%] border-2 border-zinc-400">
+                                    <IoLocationSharp className="p-0 lg:p-2 h-10 md:h-6 lg:h-10  w-auto text-zinc-400" />
                                 </div>
                             </div>
                             <div className="flex flex-col justify-start w-full ml-5">
-                                <h4 className="text-lg lg:text-2xl font-normal text-zinc-300">
+                                <h4 className="text-xl lg:text-2xl font-normal text-zinc-300">
                                     Google Meet
                                 </h4>
                                 <h4 className="text-base lg:text-lg font-normal text-zinc-300 mt-1 lg:mt-4">
-                                    <span className="text-pink-600 no-underline hover:underline"><a href="/#">https://meet.google.com/cssdc-dsc-dccc</a></span>, 5th October 2011
+                                    <span className="text-pink-600 font-semibold no-underline hover:underline"><a href="/#">https://meet.google.com/cssdc-dsc-dccc</a></span>, 5th October 2011
                                 </h4>
                             </div>
                         </div>
                     </section>
 
 
-                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-24 xl:mt-20 lg:max-w-[1300px]  px-2 md:my-20 lg:my-16">
-                        <div className="w-full h-44 bg-zinc-700/50 flex flex-col lg:flex-row justify-evenly items-center divide-zinc-900 rounded-[0.55rem] lg:rounded-[1rem] text-zinc-200">
-                            <div className="flex justify-end items-center">
-                                <h1 className="text-6xl">
+                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-10 md:mt-24 xl:mt-20 lg:max-w-[1300px]  px-2 md:my-20 lg:my-16">
+                        <div className="px-5 w-full md:h-40 lg:h-44 bg-zinc-700/50 flex flex-col md:flex-row justify-around items-center divide-zinc-900 rounded-[0.55rem] lg:rounded-[1rem] text-zinc-200">
+                            <div className="my-6 lg:my-0 w-full flex justify-around md:justify-center items-center">
+                                <h1 className="w-3/6 md:w-max text-6xl text-center">
                                     1
                                 </h1>
-                                <div className="ml-4 flex flex-col items-center">
-                                    <BsFillPersonFill className="h-7 w-7 text-center"/>
-                                    <h1 className="text-base mt-2">
-                                        Speaker(s) 
+                                <div className="w-3/6 md:w-max ml-0 md:ml-4 flex flex-col items-center justify-center">
+                                    <BsFillPersonFill className="h-5 w-5 lg:h-7 lg:w-7 text-center"/>
+                                    <h1 className="my-2 lg:my-0 text-base md:text-sm lg:text-base mt-1 lg:mt-2">
+                                        Speaker(s)
                                     </h1>
                                 </div>
                             </div>
-                            <div className="h-20 w-[2px] bg-zinc-950/60 rounded-xl"/>
-                            <div className="flex justify-center items-center">
-                                <h1 className="text-6xl">
+                            <div className="hidden md:block h-20 w-[3px] bg-zinc-950/70 rounded-xl mx-3"/>
+                            <div className="my-6 lg:my-0  w-full flex justify-around md:justify-center items-center">
+                                <h1 className="w-3/6 md:w-max text-6xl text-center">
                                     65%
                                 </h1>
-                                <div className="ml-4 flex flex-col items-center">
+                                <div className="w-3/6 md:w-max ml-0 md:ml-4 flex flex-col items-center justify-center">
                                     <div className="px-3 flex justify-center gap-1">
-                                       <LiaStarSolid className="h-4 w-4 text-center"/>
-                                       <LiaStarSolid className="h-4 w-4 text-center"/>
-                                       <LiaStarSolid className="h-4 w-4 text-center"/>
-                                       <LiaStarSolid className="h-4 w-4 text-center"/>
-                                       <LiaStarSolid className="h-4 w-4 text-center"/>
+                                       <LiaStarSolid className="h-3 w-3 lg:h-4 lg:w-4 text-center"/>
+                                       <LiaStarSolid className="h-3 w-3 lg:h-4 lg:w-4 text-center"/>
+                                       <LiaStarSolid className="h-3 w-3 lg:h-4 lg:w-4 text-center"/>
+                                       <LiaStarSolid className="h-3 w-3 lg:h-4 lg:w-4 text-center"/>
+                                       <LiaStarSolid className="h-3 w-3 lg:h-4 lg:w-4 text-center"/>
                                     </div>
-                                    <h1 className="text-base mt-2">
+                                    <h1 className="text-sm lg:text-base mt-2">
                                         Reviews and feedbacks 
                                     </h1>
                                 </div>
                             </div>
-                            <div className="h-20 w-[2px] bg-zinc-950/60 rounded-xl"/>
-                            <div className="flex justify-center items-center">
-                                <h1 className="text-6xl">
+                            <div className="hidden md:block h-20 w-[3px] bg-zinc-950/70 rounded-xl mx-3"/>
+                            <div className="my-6 lg:my-0   w-full flex justify-around md:justify-center items-center">
+                                <h1 className="w-3/6 md:w-max text-6xl text-center">
                                     70+
                                 </h1>
-                                <div className="ml-4 flex flex-col items-center">
-                                    <BsPeopleFill className="h-7 w-7 text-center"/>
-                                    <h1 className="text-base mt-2">
+                                <div className="w-3/6 md:w-max ml-0 md:ml-4 flex flex-col items-center justify-center">
+                                    <BsPeopleFill className="h-5 w-5 lg:h-7 lg:w-7 text-center"/>
+                                    <h1 className="text-sm lg:text-base mt-1">
                                         Listeners 
                                     </h1>
                                 </div>
@@ -111,36 +111,33 @@ export default function SingleProgramPage() {
                         </div>
                     </section>
 
-                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-24 xl:mt-20 lg:max-w-[1300px]  py-0 md:py-20 lg:py-16">
-                        <div className="flex flex-row justify-center md:justify-start ">
-                            <div className="text-left md:max-w-6xl px-5">
-                                <h1 className="text-center md:text-left text-xl md:text-3xl lg:text-[3rem] text-cyan-600">
+                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-16 md:mt-8 lg:mt-24 xl:mt-20 lg:max-w-[1300px]  py-0 md:py-2 lg:py-16">
+                        <div className="w-full">
+                            <div className="text-left md:max-w-6xl px-3 md:px-5">
+                                <h1 className="text-left text-4xl lg:text-[3rem] text-cyan-600">
                                     Quick Insight
                                 </h1>
                             </div>
                         </div>
-                        <div className="flex flex-row justify-center w-full my-6 md:mt-8 lg:mt-8 px-7">
+                        <div className="flex flex-row justify-center w-full my-6 md:mt-8 lg:mt-8 px-3">
                             <div className="text-left w-full">
                                 <h4 className="text-sm md:text-lg font-normal text-zinc-400">
                                     Lorem ipsum dolor itaque autem alias quo natus quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam! fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate. wj jsdckjk jw oiwurewpol ak lsc noino qiw p.
                                     Quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid Ratione cum est Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam fugit aliquid ratione cum est? Dolorem consequuntur necessitatibus voluptate. wj jsdckjk jw oiwurewpol ak lsc noino qiw p.
-                                </h4>
-                                <h4 className="text-sm md:text-lg font-normal text-zinc-400">
-                                    Uid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam! Olorem consequuntur necessitatibus voluptate.
                                 </h4>
                             </div>
                         </div>
                     </section>
 
 
-                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-24 xl:mt-20 lg:max-w-[1300px]  py-0 md:py-20 lg:py-16">
+                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-20 lg:mt-24 xl:mt-20 lg:max-w-[1300px]  py-0 md:py-16 lg:py-16">
                         <div className="flex flex-row justify-center md:justify-start ">
                             <div className="text-left md:max-w-6xl px-5">
                                 <h1 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
                                     Related
                                 </h1>
                                 <div className="relative w-full flex flex-row justify-start ml-16 md:ml-20 xl:ml-16 -mt-5 md:-mt-7">
-                                    <img className="absolute -left-20 md:-left-24 -top-1 md:-top-5 lg:-top-5 w-[20%] lg:w-[18%]" src="/png/meteor.png" alt="icon"/>
+                                    <img className="absolute -left-16 lg:-left-20 -top-1 md:-top-5 lg:-top-5 w-[20%] lg:w-[18%]" src="/png/meteor.png" alt="icon"/>
                                     {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                                     <h2 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
                                         Programs
@@ -157,8 +154,8 @@ export default function SingleProgramPage() {
                         </div> */}
                     </section>
 
-                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 xl:mt-0 lg:max-w-[1300px]  py-0 md:py-10 lg:py-5">
-                        <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-6 p-3 lg:p-0">
+                    <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-8 lg:mt-5 xl:mt-0 lg:max-w-[1300px]  py-0 lg:py-5">
+                        <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 p-3 lg:p-0">
 
                             {
                                 capacityDevelopmentSessions.map(el => {

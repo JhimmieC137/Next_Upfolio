@@ -17,81 +17,79 @@ export default function JOCPage() {
             <div className='max-w-screen m-auto overflow-hidden'>
                 <div className='px-2 lg:px-8 min-h-full'>
 
-                    <section id="hero" className="relative h-[70vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-16 pb-20 md:pt-24 md:pb-20 lg:pb-14">
+                    <section id="hero" className="relative h-[60vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-6 lg:pb-14">
                         <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-3 flex justify-center">
                             <p className="text-md  text-zinc-200 font-light">
                                 Home/Join-Our-Community
                             </p>
                         </div>
                         <div className="text-center">
-                            <h1 className="text-6xl md:text-8xl lg:text-[8rem] font-normal tracking-tight text-yellow-300">
+                            <h1 className="text-5xl md:text-8xl lg:text-8xl lg:text-[8rem] font-normal tracking-tight text-yellow-300">
                                 Join Our <br/><span className="lg:text-[9rem] text-cyan-600">Community</span>
                             </h1>
                         </div>
                     </section>
 
 
-                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]">
-                        <div className="w-full -mt-20">
-                            <img className="rounded-[2.5rem]" src="/jpg/hands_together.jpg" alt="team_meeting"/>
+                    <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 lg:max-w-[1300px]">
+                        <div className="w-full mt-16 md:mt-0 lg:-mt-20">
+                            <img className="rounded-[1rem] lg:rounded-[2.5rem]" src="/jpg/hands_together.jpg" alt="team_meeting"/>
                         </div>
                     </section>
 
 
                     <section id="intro" className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-20 lg:max-w-[1300px]  py-0 md:py-20 lg:py-16">
-                        {/* <div className="flex flex-row justify-center md:justify-start ">
-                            <div className="text-left md:max-w-6xl px-5">
-                                <h1 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
-                                    Benefits Of
-                                </h1>
-                                <div className="relative w-full flex flex-row justify-start ml-0 md:ml-10 xl:ml-16 -mt-5 md:-mt-7">
-                                    <img className="absolute -left-48 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/>
-                                    <h2 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
-                                        Being A Member
-                                    </h2>
-                                </div>
-                            </div>
-                        </div> */}
-                        <div className="w-full">
-                            
-                            <div className="flex flex-row justify-between items-center w-full my-10 md:my-24 px-5">
-                                <div className=" px-3 md:px-4 md:p-3 w-[45%]">
-                                    <h2 className="font-light text-zinc-100 text-[3.2rem] leading-tight my-10 pr-3">
-                                        We celebrate birthdays
-                                    </h2>
-                                    <p className="text-lg font-normal text-zinc-400">
-                                        Lorem ipsum dolor itaque autem alias quo natus quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam!
-                                    </p>
-                                </div>
-                                <img src="/jpg/birthday.jpg" alt="" className="rounded-2xl w-2/5"/>
-                            </div>
+                        <div className="flex flex-col justify-center items-center w-full max-w-7xl mt-0 md:mt-12 px-3">
                             
                             
-                            <div className="flex flex-row-reverse justify-between items-center w-full md:my-24 px-5">
-                                <div className=" px-3 md:px-4 md:p-3 w-[42%]">
-                                    <h2 className="font-light text-zinc-100 text-[3.2rem] leading-tight my-10 pr-3">
-                                        We celebrate birthdays
-                                    </h2>
-                                    <p className="text-lg font-normal text-zinc-400">
-                                        Lorem ipsum dolor itaque autem alias quo natus quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam!
-                                    </p>
-                                </div>
-                                <img src="/jpg/birthday.jpg" alt="" className="rounded-2xl w-2/5"/>
-                            </div>
-                            
-                            
-                            <div className="flex flex-row justify-between items-center w-full md:my-24 px-5">
-                                <div className=" px-3 md:px-4 md:p-3 w-[45%]">
-                                    <h2 className="font-light text-zinc-100 text-[3.2rem] leading-tight my-10 pr-3">
-                                        We celebrate birthdays
-                                    </h2>
-                                    <p className="text-lg font-normal text-zinc-400">
-                                        Lorem ipsum dolor itaque autem alias quo natus quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam!
-                                    </p>
-                                </div>
-                                <img src="/jpg/birthday.jpg" alt="" className="rounded-2xl w-2/5"/>
-                            </div>
+                            {/*  Item 1  */}
 
+                            <div className="my-10 h-full gap-x-6 flex flex-col md:flex-row justify-between items-center w-full lg:max-w-[77rem]">
+                                <div className="w-full max-w-[32rem] text-left mr-0 md:mr-7">
+                                    <div className="flex flex-col justify-start pl-2 md:pl-5">
+                                        <h2 className="text-2xl lg:text-4xl max-w-xl my-5 text-zinc-300 font-normal">
+                                            We celebrate birthdays
+                                        </h2>
+                                        <div className="flex flex-col max-w-3xl">
+                                            <div className="my-1 flex flex-row">
+                                                <p className="text-zinc-400 ml-0 text-sm md:text-md lg:tex-base font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cumque explicabo autem doloremque a itaque debitis reiciendis! Non saepe, asperiores delectus sed sit tempora, dignissimos quisquam maxime quas, dolores dolor.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[32rem] text-left ml-0 mt-10 md:mt-0 md:ml-7">
+                                    <div className='flex justify-center md:justify-end w-full'>
+                                        <img src="/jpg/birthday.jpg" alt="" className="rounded-2xl w-full border-[3px] border-white/5"/>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/*  Item 1 ends */}
+                            
+                            
+                            {/*  Item 2  */}
+                            
+                            <div className="my-10 h-full gap-x-6 flex  flex-col md:flex-row-reverse justify-between items-center w-full lg:max-w-[77rem]">
+                                <div className="w-full flex justify-start md:justify-end max-w-[32rem] text-left ml-0 md:ml-7">
+                                    <div className="flex flex-col justify-center w-full pl-2">
+                                        <h2 className="text-2xl lg:text-4xl max-w-xl my-5 text-zinc-300 font-normal">
+                                            We celebrate birthdays
+                                        </h2>
+                                        <div className="flex flex-col max-w-3xl">
+                                            <div className="my-1 flex flex-row">
+                                                <p className="text-zinc-400 ml-0 text-sm md:text-md  lg:tex-base font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ullam quae amet, sint optio dolorum, qui obcaecati quisquam maiores quasi minus laudantium atque blanditiis. Omnis voluptatum tempora nostrum voluptates possimus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="w-full max-w-[32rem] text-left mr-0 mt-10 md:mt-0 md:mr-7">
+                                    <div className='flex justify-center md:justify-start w-full'>
+                                        <img src="/jpg/birthday.jpg" alt="" className="rounded-2xl w-full border-[3px] border-white/5"/>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            {/*  Item 2 ends */}
                         </div>
                     </section>
 
@@ -100,12 +98,12 @@ export default function JOCPage() {
                         {/* <h2 className="text-2xl text-cyan-600 mb-10 px-5">
                             Fill the form
                         </h2> */}
-                        <div className="flex flex-row justify-center md:justify-start ">
+                        <div className="flex flex-row justify-center md:justify-start mt-20 md:mt-3">
                             <div className="text-left md:max-w-6xl px-5">
-                                <h1 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
+                                <h1 className="text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-yellow-300">
                                     Community
                                 </h1>
-                                <div className="relative w-full flex flex-row justify-start ml-0 md:ml-10 xl:ml-16 -mt-5 md:-mt-7">
+                                <div className="relative w-full flex flex-row justify-center md:justify-start ml-0 md:ml-10 xl:ml-16 -mt-5 md:-mt-7">
                                     {/* <img className="absolute -left-7 -top-6 md:-top-5 lg:-top-5 w-[29%]" src="/png/meteor.png" alt="icon"/> */}
                                     {/* <img className="ml-10 h-24 w-auto" src="/svg/main-logo.svg" altccccccccccccc="main-logo"/> */}
                                     <h2 className="text-center md:text-left text-[3rem] md:text-[4.5rem] lg:text-[6rem] xl:text-[6.5rem] 2xl:text-[7.7rem] text-cyan-600 font-normal">
@@ -114,9 +112,9 @@ export default function JOCPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[80%] m-auto">
+                        <div className="w-[95%] md:w-[80%] m-auto my-5">
                             <form className="w-full" action="">
-                                <div className="grid grid-flow-row grid-cols-2 gap-x-10 gap-y-5">
+                                <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
                                     <div className="w-full flex flex-col">
                                         <label className="mb-3 pl-1 text-md text-zinc-400" htmlFor="name">
                                             First name *
@@ -192,27 +190,27 @@ export default function JOCPage() {
                                     </div>
                                 </div>
                                 <div className="h-px bg-zinc-200/50 w-[90%] mt-16 mx-auto"/>
-                                <div className="w-full flex justify-around gap-12 mt-16">
+                                <div className="w-full flex flex-col md:flex-row justify-around gap-10 md:gap-6 lg:gap-12 mt-16">
                                     
                                     <a href={'/#'} className="w-full p-4 flex justify-center items-center rounded-lg bg-black border border-zinc-300/20 hover:bg-zinc-950 ease-in-out duration-200">
-                                        <p className="text-base text-white">
+                                        <p className="text-sm lg:text-base text-white">
                                             Follow us on
                                         </p>
-                                        <FaXTwitter className="text-2xl mx-2 text-white"/>
+                                        <FaXTwitter className="text-xl lg:text-2xl mx-2 text-white"/>
                                     </a>
                                     
                                     <a href={'/#'} className="w-full p-4 flex justify-center items-center rounded-lg bg-gradient-to-r from-pink-500 from-[15%] via-orange-500 via-[40%] to-blue-700  hover:from-blue-700 hover:from-[0%] hover:via-orange-500 hover:via-[30%] hover:to-pink-500 ease-in-out duration-300">
-                                        <p className="text-base text-white">
+                                        <p className="text-sm lg:text-base text-white">
                                             Follow us on 
                                         </p>
-                                        <FaInstagram className="text-2xl mx-2 text-white"/>
+                                        <FaInstagram className="text-xl lg:text-2xl mx-2 text-white"/>
                                     </a>
                                     
                                     <a href={'/#'} className="group w-full p-4 flex justify-center items-center rounded-lg bg-green-600  hover:bg-green-500 ease-in-out duration-200">
-                                        <p className="text-base text-white">
+                                        <p className="text-sm lg:text-base text-white">
                                             Message us on
                                         </p>
-                                        <FaWhatsapp className="text-2xl mx-2 text-white"/>
+                                        <FaWhatsapp className="text-xl lg:text-2xl mx-2 text-white"/>
                                     </a>
 
                                 </div>

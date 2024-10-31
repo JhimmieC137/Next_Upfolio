@@ -54,7 +54,7 @@ export default function Footer() {
                         </div>
                         <div className="mt-16 w-full">
                             <div className="flex justify-center">
-                                <Link href={'/volunteer'} className="w-36 h-36 p-5 rounded-full bg-pink-700 hover:bg-pink-500 ease-in-out duration-200 flex flex-col items-center text-center cursor-pointer">
+                                <Link href={'/contact'} className="w-36 h-36 p-5 rounded-full bg-pink-700 hover:bg-pink-500 ease-in-out duration-200 flex flex-col items-center text-center cursor-pointer">
                                     <div className="flex flex-col items-center w-full">
                                         <FaArrowDown className="bouncing-arrow font-medium h-5 w-5 text-white"/>
                                         <p className="relative text-xl font-medium text-white mt-3">
