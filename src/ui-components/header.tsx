@@ -57,11 +57,14 @@ export default function Header() {
                     </button>
                 </div>
                 <div className="hidden xl:flex lg:gap-x-12">
-                    {pageList.map((page) => (
-                        <Link key={page.name} href={page.href} className="text-md font-normal ease-in-out duration-300 leading-6 text-zinc-200 link-underline link-underline-black ">
-                            {page.name}
-                        </Link>
-                    ))}
+                    {pageList.map((page) => {
+                        if (page.name != 'Join Our Community')
+                        return (
+                            <Link key={page.name} href={page.href} className="text-md font-normal ease-in-out duration-300 leading-6 text-zinc-200 link-underline link-underline-black ">
+                                {page.name}
+                            </Link>
+                        )
+                    })}
                 </div>
                 <div className="hidden xl:flex md:flex-1 lg:justify-end">
                     <Link href="/join-our-community" className="md:w-[65%] 2xl:w-[50%] text-center text-md font-bold leading-6 text-pink-400 hover:text-zinc-200 rounded-full border-2 border-pink-400 py-3 px-3 hover:bg-pink-700 hover:border-pink-700 ease-in-out duration-300 group">

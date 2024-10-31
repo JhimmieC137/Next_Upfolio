@@ -30,6 +30,11 @@ export const pageList = [
     name: 'Contact',
     href: '/contact'
   },
+  {
+    id: 6,
+    name: 'Join Our Community',
+    href: '/join-our-community'
+  },
   // More pages...
 ]
 
@@ -71,11 +76,11 @@ export default function MobileNav({ sideBarState, setSideBarState } : { sideBarS
                     <div className="flow-root">
                       <ul role="list" className="-my-6 divide-y divide-white/20">
                         {pageList.map((page) => (
-                        <li key={page.id} className="flex py-6">
-                          <div className="ml-4 flex flex-1 flex-col">
-                            <Link href={page.href} onClick={() => setSideBarState(false)} className="text-sm text-white">{page.name}</Link>
-                          </div>
-                        </li>
+                          <li key={page.id} className="flex py-6">
+                            <div className="ml-4 flex flex-1 flex-col">
+                              <Link href={page.href} onClick={() => setSideBarState(false)} className="text-sm text-white">{page.name}</Link>
+                            </div>
+                          </li>
                         ))}
                       </ul>
                     </div>
