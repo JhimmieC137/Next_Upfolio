@@ -1,3 +1,4 @@
+import { blogData } from "@/contexts/blog-context"
 import { informationSessions } from "@/contexts/team-context"
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import { LuDot } from "react-icons/lu"
@@ -48,36 +49,18 @@ export default function BlogsPage() {
                             </div>
                         </div>
                         
-                        {/* <div className="flex flex-row items-center w-full mt-5 px-10">
-                            <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-14 px-5 rounded-[17px] md:rounded-[25px] lg:rounded-[33px]">
-                                <p className='w-full m-auto text-base  font-normal'>Technology</p>
-                            </div>
-                            <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-14 px-5 rounded-[17px] md:rounded-[25px] lg:rounded-[33px]">
-                                <p className='w-full m-auto text-base  font-normal'>Internship</p>
-                            </div>
-                            <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-14 px-5 rounded-[17px] md:rounded-[25px] lg:rounded-[33px]">
-                                <p className='w-full m-auto text-base  font-normal'>Boost</p>
-                            </div>
-                            <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-14 px-5 rounded-[17px] md:rounded-[25px] lg:rounded-[33px]">
-                                <p className='w-full m-auto text-base  font-normal'>Boost</p>
-                            </div>
-                            <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-14 px-5 rounded-[17px] md:rounded-[25px] lg:rounded-[33px]">
-                                <p className='w-full m-auto text-base  font-normal'>Boost</p>
-                            </div>
-                        </div> */}
-                        
                         <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 mt-20 px-3 lg:px-0 gap-7">
 
                             {
-                                informationSessions.map(el => {
+                                blogData.map(el => {
                                     return (
                                         <div key={el.id} className="flex flex-col items-center w-full mb-16">
                                             <div className="flex flex-col item-center max-w-[36rem]">
-                                                <div className='relative w-full max-w-[43rem] max-h-[36rem] xl:rounded-[2rem] rounded-[0.85rem] mb-3 overflow-hidden'>
+                                                <div className='relative w-full max-w-[43rem] max-h-[23rem] md:max-h-[13.8rem] lg:max-h-[23rem] xl:rounded-[2rem] rounded-[0.85rem] mb-3 overflow-hidden'>
                                                     <div className="cursor-pointer z-10 absolute top-4 right-4 lg:top-8 lg:right-8 rounded-full bg-white text-zinc-800 h-16 w-16 lg:h-24 lg:w-24 p-3 flex justify-center  hover:bg-pink-600 hover:text-zinc-100 ease-in-out duration-200">
                                                         <ArrowRightIcon className="font-bold m-auto p-1 h-10 w-auto -rotate-45" />
                                                     </div>
-                                                    <img className='cursor-pointer relative w-full' src={`/upfolio_programs/information_sessions/${el.image}`} alt=''/>
+                                                    <img className='cursor-pointer relative w-full' src={`/upfolio_blogs/${el.img}`} alt=''/>
                                                 </div>
                                                 <div className="flex flex-col w-full">
                                                     <h3 className='text-xl lg:text-3xl text-zinc-300 max-w-max my-4 lg:my-7'>
@@ -86,17 +69,21 @@ export default function BlogsPage() {
                                                 </div>
                                             </div>
                                             <div className="w-full lg:w-[90%] flex justify-start items-center">
-                                                <div className="flex justify-center mr-6 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-8 px-4 rounded-[15px] lg:rounded-[20px]">
-                                                    <p className='w-full m-auto text-sm  font-normal'>Boost</p>
+                                                <div className="flex justify-center mr-3 lg:mr-6 border-solid border-[1px] border-zinc-300/60 text-zinc-300/80 text-center h-8 px-4 rounded-[15px] lg:rounded-[20px]">
+                                                    {
+                                                        el.tags.map((tag, index) => (
+                                                            <p key={index} className='w-full m-auto text-sm  font-normal'>{tag}</p>
+                                                        ))
+                                                    }
                                                 </div>
                                                 <h2 className="text-sm lg:text-lg font-normal text-zinc-400 mr-1">
-                                                    15th October, 2025 
+                                                    {el.date}
                                                 </h2>
                                                 <h2 className="text-sm lg:text-lg font-normal text-zinc-400 mr-1">
                                                     <LuDot className="h-7 w-auto" />
                                                 </h2>
                                                 <h2 className="text-sm lg:text-lg font-normal text-zinc-400 ">
-                                                    10 mins read
+                                                    {el.mins} mins read
                                                 </h2>
                                             </div>
                                         </div>
@@ -105,6 +92,13 @@ export default function BlogsPage() {
                             }
                             
                         </div>
+                        {/* <div className="w-full flex justify-center items-center lg:justify-end">
+                            <div className="flex justify-center md:w-[25%] lg:w-1/6 text-zinc-500">
+                                <h1 className="text-3xl font-semibold hover:text-zinc-300 ease-in-out duration-300 cursor-pointer">{'<'}</h1>
+                                <h1 className="text-2xl font-normal pt-px mx-10 text-zinc-300">{'1 / 3'}</h1>
+                                <h1 className="text-3xl font-semibold hover:text-zinc-300 ease-in-out duration-300 cursor-pointer">{'>'}</h1>
+                            </div>
+                        </div> */}
 
                     </section>
 

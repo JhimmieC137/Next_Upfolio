@@ -27,6 +27,7 @@ import { ParticlesBounce } from '@tsparticles/engine';
 import TsParticles from '@/ui-components/TsParticles';
 import ScrollProgressBar from '@/ui-components/ProgressScrollBar';
 import Particle from '@/ui-components/Particles';
+import { blogData } from '@/contexts/blog-context';
 
 export default function HomePage() {
   const refToServices = useRef<HTMLElement | null>(null);
@@ -578,121 +579,51 @@ export default function HomePage() {
                     </h2>
                   </div>
                 </div>
-                <div className='text-black'>
-                  Button
+                <div className='w-2/6 flex justify-end items-end'>
+                  <Link href="/blogs" className="hidden md:block w-[60%] lg:w-[50%] mx-auto md:m-0 text-center text-md font-normal leading-6 text-zinc-200 rounded-full md:ml-2 py-3 px-3 bg-pink-700 hover:bg-pink-500 ease-in-out duration-300 group">
+                    See more
+                  </Link>
                 </div>
               </div>
               
               <div className="flex justify-center w-full max-w-7xl mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-16 w-full">
-
-                  {/* Grid Item 1 */}
-
-                  <div className="flex flex-col item-cente max-w-[43rem] peer">
-                    <div className='w-full max-w-[43rem] max-h-[23rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
-                      <img className='w-full' src='/webp/blog-1.webp' alt=''/>
-                    </div>
-                    <div className="flex flex-row items-center w-full my-3">
-                      <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300 text-zinc-300 text-center h-12 px-5 rounded-[10px]">
-                        <p className='w-full m-auto text-base md:text-xl  font-normal'>Technology</p>
+                  
+                  {
+                    blogData.map((blog) => (
+                      <div key={blog.id} className="flex flex-col item-center max-w-[43rem] peer">
+                        <div className='w-full max-w-[43rem] max-h-[23rem] md:max-h-[13.5rem] lg:max-h-[23rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
+                          <img className='w-full' src={`/webp/${blog.img}`} alt={`${blog.title}`}/>
+                        </div>
+                        <div className="flex flex-row items-center w-full my-3">
+                          <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300 text-zinc-300 text-center px-4 h-8 lg:h-12 lg:px-5 rounded-[10px]">
+                            {
+                              blog.tags.map((tag, index) => (
+                                <p key={index} className='w-full m-auto text-sm lg:text-xl  font-normal'>{tag}</p>
+                              ))
+                            }
+                          </div>
+                          <p className='text-sm lg:text-lg text-zinc-300 font-normal'>
+                            {blog.date}
+                          </p>
+                        </div>
+                        <div className="flex flex-row justify-between w-full group my-1 lg:my-4">
+                          <h3 className='text-xl lg:text-3xl  text-zinc-400 max-w-max group-hover:text-pink-400 pr-3 ease-in-out duration-500 peer'>
+                            {blog.title}
+                          </h3>
+                          <div className="flex justify-center items-center w-auto max-w-max px-px rounded-[50%] text-zinc-400 group-hover:text-pink-400 group-hover:-rotate-45 peer-has-[img:hover]:-rotate-45 ease-in-out duration-500">
+                            <ArrowRightIcon className="m-auto p-1 w-8 lg:w-10 h-auto" />
+                          </div>
+                        </div>
                       </div>
-                      <p className='text-sm md:text-lg text-zinc-300 font-normal'>
-                        12th February, 2024
-                      </p>
-                    </div>
-                    <div className="flex flex-row justify-between w-full group my-4">
-                      <h3 className='text-xl md:text-3xl  text-zinc-400 max-w-max group-hover:text-pink-400 pr-3 ease-in-out duration-500 peer'>
-                        {/* Title of this blog is the title */}
-                        How cold email can scale a business
-                      </h3>
-                      <div className="h-12 w-auto max-w-max p-1 rounded-[50%] text-zinc-400 group-hover:text-pink-400 group-hover:-rotate-45 peer-has-[img:hover]:-rotate-45 ease-in-out duration-500">
-                        <ArrowRightIcon className="m-auto p-1 h-7 md:h-10 w-auto" />
-                      </div>
-                    </div>
+                    ))
+                  }
+
+                  <div className='flex justify-end w-full'>
+                    <Link href="/blogs" className="md:hidden block w-[50%] mx-auto md:m-0 text-center text-md font-normal leading-6 text-zinc-200 rounded-full md:ml-2 py-3 px-3 bg-pink-700 hover:bg-pink-500 ease-in-out duration-300 group">
+                      See more
+                    </Link>
                   </div>
-
-                  {/* End of Grid Item 1 */}
-
-                  {/* Grid Item 2 */}
-
-                  <div className="flex flex-col item-cente max-w-[43rem]">
-                    <div className='w-full max-w-[43rem] max-h-[23rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
-                      <img className='w-full' src='/webp/blog-3.webp' alt=''/>
-                    </div>
-                    <div className="flex flex-row items-center w-full my-3">
-                      <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300 text-zinc-300 text-center h-12 px-5 rounded-[10px]">
-                        <p className='w-full m-auto text-base md:text-xl  font-normal'>Technology</p>
-                      </div>
-                      <p className='text-sm text-zinc-300 font-normal'>
-                        12th February, 2024
-                      </p>
-                    </div>
-                    <div className="flex flex-row justify-between w-full group my-4">
-                      <h3 className='text-xl md:text-3xl text-zinc-400 max-w-max group-hover:text-pink-400 pr-3 ease duration-300 peer'>
-                        {/* Title of this blog is the title */}
-                        How cold email can scale a business
-                      </h3>
-                      <div className="h-12 w-auto max-w-max p-1 rounded-[50%] text-zinc-400 group-hover:text-pink-400 group-hover:-rotate-45 peer-has-[img:hover]:-rotate-45 ease duration-300">
-                        <ArrowRightIcon className="m-auto p-1 h-7 md:h-10 w-auto" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* End of Grid Item 2 */}              
-
-                  {/* Grid Item 3 */}
-
-                  <div className="flex flex-col item-cente max-w-[43rem]">
-                    <div className='w-full max-w-[43rem] max-h-[23rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
-                      <img className='w-full' src='/webp/blog-3.webp' alt=''/>
-                    </div>
-                    <div className="flex flex-row items-center w-full my-3">
-                      <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300 text-zinc-300 text-center h-12 px-5 rounded-[10px]">
-                        <p className='w-full m-auto text-base md:text-xl  font-normal'>Technology</p>
-                      </div>
-                      <p className='text-sm md:text-lg text-zinc-300 font-normal'>
-                        12th February, 2024
-                      </p>
-                    </div>
-                    <div className="flex flex-row justify-between w-full group my-4">
-                      <h3 className='text-xl md:text-3xl text-zinc-400 max-w-max group-hover:text-pink-400 pr-3 ease duration-300 peer'>
-                        {/* Title of this blog is the title */}
-                        How cold email can scale a business
-                      </h3>
-                      <div className="h-12 w-auto max-w-max p-1 rounded-[50%] text-zinc-400 group-hover:text-pink-400 group-hover:-rotate-45 peer-has-[img:hover]:-rotate-45 ease duration-300">
-                        <ArrowRightIcon className="m-auto p-1 h-7 md:h-10 w-auto" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* End of Grid Item 3 */}
-
-                  {/* Grid Item 4 */}
-
-                  <div className="flex flex-col item-cente max-w-[43rem]">
-                    <div className='w-full max-w-[43rem] max-h-[23rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
-                      <img className='w-full' src='/webp/blog-4.webp' alt=''/>
-                    </div>
-                    <div className="flex flex-row items-center w-full my-3">
-                      <div className="flex justify-center mr-5 border-solid border-[1px] border-zinc-300 text-zinc-300 text-center h-12 px-5 rounded-[10px]">
-                        <p className='w-full m-auto text-base md:text-xl font-normal'>Technology</p>
-                      </div>
-                      <p className='text-sm md:text-lg text-zinc-300 font-normal'>
-                        12th February, 2024
-                      </p>
-                    </div>
-                    <div className="flex flex-row justify-between w-full group my-4">
-                      <h3 className='text-xl md:text-3xl text-zinc-400 max-w-max group-hover:text-pink-400 pr-3 ease duration-300 peer'>
-                        {/* Title of this blog is the title */}
-                        How cold email can scale a business
-                      </h3>
-                      <div className="h-12 w-auto max-w-max p-1 rounded-[50%] text-zinc-400 group-hover:text-pink-400 group-hover:-rotate-45 peer-has-[img:hover]:-rotate-45 ease duration-300">
-                        <ArrowRightIcon className="m-auto p-1 h-7 md:h-10 w-auto" />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* End of Grid Item 4 */}
 
                 </div>
               </div>
