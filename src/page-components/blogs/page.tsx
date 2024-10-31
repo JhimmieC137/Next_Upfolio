@@ -1,5 +1,4 @@
 import { blogData } from "@/contexts/blog-context"
-import { informationSessions } from "@/contexts/team-context"
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
 import { LuDot } from "react-icons/lu"
 

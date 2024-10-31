@@ -1,4 +1,4 @@
-import { capacityDevelopmentSessions, informationSessions } from "@/contexts/team-context";
+import { capacityDevelopmentSessions, informationSessions } from "@/contexts/program-context";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function ProgramsPage() {
