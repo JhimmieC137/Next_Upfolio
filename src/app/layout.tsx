@@ -8,9 +8,7 @@ import "../../public/styles/globals.css";
 import { ThemeProvider } from "./theme-provider";
 import type { Viewport } from 'next'
 import TsParticles from "@/ui-components/TsParticles";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

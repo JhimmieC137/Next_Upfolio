@@ -1,18 +1,12 @@
 'use client'
-import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
-import { ArrowRightIcon, ChevronDownIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-import { FaArrowRight, FaArrowRightLong, FaPeopleGroup, FaPeopleRoof } from "react-icons/fa6";
+import { useRef } from "react";
+import { FaPeopleGroup } from "react-icons/fa6";
 import { PiStarFourFill } from 'react-icons/pi';
-import { MdOutlineJoinInner } from 'react-icons/md';
 import { VscGitPullRequestCreate } from 'react-icons/vsc';
 import { CgFilters } from 'react-icons/cg';
-import { HiArrowNarrowRight, HiPuzzle } from 'react-icons/hi';
 import { BsPersonRaisedHand } from 'react-icons/bs';
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
-import { BiPlusCircle } from 'react-icons/bi';
-import { AnimatePresence, easeOut, motion } from 'framer-motion';
 import * as Accordion from '@radix-ui/react-accordion';
 import AccordionItem from '@/ui-components/Accordion/Item';
 import AccordionTrigger from '@/ui-components/Accordion/Trigger';

@@ -1,4 +1,4 @@
-import { capacityDevelopmentSessions, informationSessions } from "@/contexts/team-context";
+import { capacityDevelopmentSessions } from "@/contexts/program-context";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { BsFillPersonFill, BsPeopleFill } from "react-icons/bs";
 import { IoLocationSharp } from "react-icons/io5";
