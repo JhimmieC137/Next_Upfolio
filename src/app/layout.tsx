@@ -8,6 +8,9 @@ import "../../public/styles/globals.css";
 import { ThemeProvider } from "./theme-provider";
 import type { Viewport } from 'next'
 import TsParticles from "@/ui-components/TsParticles";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,8 +34,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <body className={`absolute bg-zinc-950 text-zinc-200 w-full ${inter.className}`}>
         <TsParticles />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

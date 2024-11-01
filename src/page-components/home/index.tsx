@@ -2,7 +2,7 @@
 import { ProgressBar } from '@nadfri/react-scroll-progress-bar';
 import { ArrowRightIcon, ChevronDownIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaArrowRight, FaArrowRightLong, FaPeopleGroup, FaPeopleRoof } from "react-icons/fa6";
 import { PiStarFourFill } from 'react-icons/pi';
 import { MdOutlineJoinInner } from 'react-icons/md';
@@ -22,16 +22,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { TestimonialContent } from '@/contexts/testimonial-context';
 import BlitzImage from '@/ui-components/BlitzImage';
-// import Particles from '@/ui-components/Particles';
-import { ParticlesBounce } from '@tsparticles/engine';
-import TsParticles from '@/ui-components/TsParticles';
-import ScrollProgressBar from '@/ui-components/ProgressScrollBar';
-import Particle from '@/ui-components/Particles';
 import { blogData } from '@/contexts/blog-context';
 
 export default function HomePage() {
   const refToServices = useRef<HTMLElement | null>(null);
-
 
   return (
     <main className="relative w-full">
@@ -40,7 +34,9 @@ export default function HomePage() {
       <div className='w-full m-auto'>
         <div className='px-2 lg:px-8 min-h-full'>
           
-          <section id="hero" className="h-screen flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-16 pb-20 md:pt-20 md:pb-24 lg:pb-24">
+          <section 
+            id="hero" 
+            className="h-screen flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-16 pb-20 md:pt-20 md:pb-24 lg:pb-24" >
             {/* <div className="hidden sm:mb-8 lg:mb-1 sm:flex sm:justify-center">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-zinc-300 ring-1 ring-zinc-300/80 hover:ring-zinc-300 ease-in-out duration-200">
                 Announcing our next round of announcements.{' '}
