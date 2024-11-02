@@ -333,7 +333,7 @@ export default function TsParticles() {
             "value": 6
           },
           "opacity": {
-            "value": 0.15,
+            "value": 0.1,
             "animation": {
               "count": 0,
               "enable": false,
