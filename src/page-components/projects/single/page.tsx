@@ -1,3 +1,4 @@
+import FadeIn from "@/ui-components/FadeIn";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 export default function SingleProjectPage() {
@@ -7,16 +8,20 @@ export default function SingleProjectPage() {
                 <div className='px-2 lg:px-8 min-h-full'>
 
                     <section id="hero" className="relative h-[60vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-24 lg:pb-14">
-                        <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-5 flex justify-center">
-                            <p className="text-md  text-zinc-200 font-light">
-                                Home/Projects/Single
-                            </p>
-                        </div>
-                        <div className="text-center">
-                            <h1 className="text-5xl md:text-8xl lg:text-[8rem] font-normal tracking-tight text-yellow-300">
-                                Driving Change<br/><span className="lg:text-[9rem] text-cyan-600">Through Projects </span>
-                            </h1>
-                        </div>
+                        <FadeIn>
+                            <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-5 flex justify-center">
+                                <p className="text-md  text-zinc-200 font-light">
+                                    Home/Projects/Single
+                                </p>
+                            </div>
+                        </FadeIn>
+                        <FadeIn>
+                            <div className="text-center">
+                                <h1 className="text-5xl md:text-8xl lg:text-[8rem] font-normal tracking-tight text-yellow-300">
+                                    Driving Change<br/><span className="lg:text-[9rem] text-cyan-600">Through Projects </span>
+                                </h1>
+                            </div>
+                        </FadeIn>
                     </section>
 
                     {/* <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px]">
