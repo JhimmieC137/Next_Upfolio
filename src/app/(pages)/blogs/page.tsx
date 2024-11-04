@@ -1,6 +1,8 @@
 'use client'
 
 import BlogsPage from "@/page-components/blogs/page";
+import Footer from "@/ui-components/footer";
+import Header from "@/ui-components/header";
 import ScreenLoader from "@/ui-components/ScreenLoader";
 import { useEffect, useState } from "react";
 
@@ -8,7 +10,7 @@ export default function Blogs() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const setDisplay = () => {
-    setTimeout(() => setIsLoading(false), 2500);
+    setTimeout(() => setIsLoading(false), 1000);
   }
 
   useEffect(() => {
@@ -18,7 +20,11 @@ export default function Blogs() {
   return (
     <>
       <ScreenLoader loaded={!isLoading}/>
-      <BlogsPage />
+      <div className={`${isLoading && 'hidden'} w-full`}>
+        <Header />
+        <BlogsPage />
+        <Footer />
+      </div>
     </>
   );
 }
