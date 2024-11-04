@@ -1,19 +1,31 @@
+'use client'
+
 import Footer from '@/ui-components/footer';
 import Header from '@/ui-components/header';
+import ScreenLoader from '@/ui-components/ScreenLoader';
 import TsParticles from '@/ui-components/TsParticles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function MainLayout({ children } : { children: React.ReactNode }) {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const setDisplay = () => {
+    setTimeout(() => setIsLoading(false), 2500);
+  }
+
+  useEffect(() => {
+    setDisplay();
+  }, [])
+
   return (
-    <div className="absolute w-full">
-      <TsParticles />
-      <div className='flex flex-col justify-between items-center w-full'>
-        <Header/>
-        <div className='w-full'>
+    <>
+      <ScreenLoader loaded={!isLoading} />
+      <div className={`${isLoading && 'hidden'} absolute w-full`}>
+        <TsParticles />
+        <div className='flex flex-col justify-between items-center w-full'>
           {children}
         </div>
-        <Footer/>
       </div>
-    </div>
+    </>
   );
 };

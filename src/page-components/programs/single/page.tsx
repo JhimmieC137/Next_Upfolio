@@ -1,28 +1,40 @@
-import { capacityDevelopmentSessions } from "@/contexts/program-context";
+import { capacityDevelopmentSessions, initialProgramData, IProgram, upfolioPrograms } from "@/contexts/program-context";
 import FadeIn from "@/ui-components/FadeIn";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { useEffect, useState } from "react";
 import { BsFillPersonFill, BsPeopleFill } from "react-icons/bs";
 import { IoLocationSharp } from "react-icons/io5";
 import { LiaStarSolid } from "react-icons/lia";
 
-export default function SingleProgramPage() {
+export default function SingleProgramPage({path} : {path: string}) {
+    const [programData, setProgramData] = useState<IProgram>(initialProgramData)
+
+    useEffect(() => {
+        for (const data of upfolioPrograms) {
+            if (data.path === path) setProgramData(data);
+            // else redirect('/not-found');
+        }
+    }, [upfolioPrograms])
+
     return (
         <main className="w-full relative">
             <div className='max-w-screen m-auto overflow-hidden'>
                 <div className='px-2 lg:px-8 min-h-full'>
 
-                    <section id="hero" className="relative h-[60vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-24 lg:pb-14">
+                    <section id="hero" className="relative h-[80vh] flex flex-col justify-center items-center mx-auto max-w-2xl md:max-w-3xl lg:max-w-6xl pt-32 xl:pt-24 pb-18 md:pb-24 lg:pb-14">
                         <FadeIn>
                             <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-3 flex justify-center">
                                 <p className="text-md  text-zinc-200 font-light">
-                                    Home/Programs/Single
+                                    Home / Programs / <span className='capitalize'>{path}</span>
                                 </p>
                             </div>
                         </FadeIn>
                         <FadeIn>
                             <div className="text-center">
-                                <h1 className="text-5xl md:text-8xl lg:text-[8rem] font-normal tracking-tight text-yellow-300">
-                                Programs <br/><span className="lg:text-[9rem] text-cyan-600">That Matter</span>
+                                <h1 className="text-5xl lg:text-[8rem] font-normal tracking-tight text-yellow-300 capitalize">
+                                    {path.split('-')[0]} {path.split('-')[1]}<br/><span className="text-cyan-600">{path.split('-').slice(2).map(el => `${el} `)}</span>
                                 </h1>
                             </div>
                         </FadeIn>
@@ -43,14 +55,14 @@ export default function SingleProgramPage() {
                             <div className="flex flex-row justify-center md:justify-start ">
                                 <div className="text-left max-w-full lg:max-w-xl pr-0 md:pl-5 lg:px-5">
                                     <p className="text-sm text-zinc-400/80 mb-2">
-                                        Information Sessions  
+                                        {programData.category} 
                                     </p>
-                                    <h1 className="text-left text-[2rem] md:text-[2.3rem] 2xl:text-[3rem] text-yellow-300">
-                                        Discovering Fully Funded <span className="text-cyan-600">Scholarships</span>
+                                    <h1 className="text-left text-[2rem] md:text-[2.3rem] 2xl:text-[3rem] text-yellow-300 capitalize">
+                                        {path.split('-')[0]} {path.split('-')[1]} <span className="text-cyan-600">{path.split('-').slice(2).map(el => `${el} `)}</span>
                                     </h1>
                                     <div className="w-full px-px my-3">
                                         <h4 className="text-sm md:text-base font-normal text-zinc-400">
-                                            Lorem ipsum dolor itaque autem alias quo natus quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam!
+                                            {programData.description}
                                         </h4>
                                     </div>
                                 </div>
@@ -67,10 +79,10 @@ export default function SingleProgramPage() {
                             <FadeIn>
                                 <div className="flex flex-col justify-start w-full ml-5">
                                     <h4 className="text-xl lg:text-2xl font-normal text-zinc-300">
-                                        Google Meet
+                                        {programData.location}
                                     </h4>
                                     <h4 className="text-base lg:text-lg font-normal text-zinc-300 mt-1 lg:mt-4">
-                                        <span className="text-pink-600 font-semibold no-underline hover:underline"><a href="/#">https://meet.google.com/cssdc-dsc-dccc</a></span>, 5th October 2011
+                                        <span className="text-pink-600 font-semibold no-underline hover:underline"><a href="/#">{programData.address}</a></span>, {programData.date}
                                     </h4>
                                 </div>
                             </FadeIn>
@@ -83,7 +95,7 @@ export default function SingleProgramPage() {
                             <div className="px-5 w-full md:h-40 lg:h-44 bg-zinc-700/50 flex flex-col md:flex-row justify-around items-center divide-zinc-900 rounded-[0.55rem] lg:rounded-[1rem] text-zinc-200">
                                 <div className="my-6 lg:my-0 w-full flex justify-around md:justify-center items-center">
                                     <h1 className="w-3/6 md:w-max text-6xl text-center">
-                                        1
+                                        {programData.speakers}
                                     </h1>
                                     <div className="w-3/6 md:w-max ml-0 md:ml-4 flex flex-col items-center justify-center">
                                         <BsFillPersonFill className="h-5 w-5 lg:h-7 lg:w-7 text-center"/>
@@ -95,7 +107,7 @@ export default function SingleProgramPage() {
                                 <div className="hidden md:block h-20 w-[3px] bg-zinc-950/70 rounded-xl mx-3"/>
                                 <div className="my-6 lg:my-0  w-full flex justify-around md:justify-center items-center">
                                     <h1 className="w-3/6 md:w-max text-6xl text-center">
-                                        65%
+                                        {programData.feedback}
                                     </h1>
                                     <div className="w-3/6 md:w-max ml-0 md:ml-4 flex flex-col items-center justify-center">
                                         <div className="px-3 flex justify-center gap-1">
@@ -113,7 +125,7 @@ export default function SingleProgramPage() {
                                 <div className="hidden md:block h-20 w-[3px] bg-zinc-950/70 rounded-xl mx-3"/>
                                 <div className="my-6 lg:my-0   w-full flex justify-around md:justify-center items-center">
                                     <h1 className="w-3/6 md:w-max text-6xl text-center">
-                                        70+
+                                        {programData.attendance}+
                                     </h1>
                                     <div className="w-3/6 md:w-max ml-0 md:ml-4 flex flex-col items-center justify-center">
                                         <BsPeopleFill className="h-5 w-5 lg:h-7 lg:w-7 text-center"/>
@@ -140,8 +152,7 @@ export default function SingleProgramPage() {
                             <div className="flex flex-row justify-center w-full my-6 md:mt-8 lg:mt-8 px-3">
                                 <div className="text-left w-full">
                                     <h4 className="text-sm md:text-lg font-normal text-zinc-400">
-                                        Lorem ipsum dolor itaque autem alias quo natus quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam! fugit aliquid, ratione cum est? Dolorem consequuntur necessitatibus voluptate. wj jsdckjk jw oiwurewpol ak lsc noino qiw p.
-                                        Quasi fugiat eaque ipsa quis voluptate nam numquam, fugit aliquid Ratione cum est Dolorem consequuntur necessitatibus voluptate, ipsa quis voluptate nam numquam fugit aliquid ratione cum est? Dolorem consequuntur necessitatibus voluptate. wj jsdckjk jw oiwurewpol ak lsc noino qiw p.
+                                        {programData.insight}
                                     </h4>
                                 </div>
                             </div>
@@ -174,21 +185,24 @@ export default function SingleProgramPage() {
                         <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 p-3 lg:p-0">
 
                             {
-                                capacityDevelopmentSessions.map(el => {
+                                upfolioPrograms.map(el => {
+                                    if (el.category === programData.category && el.path != path)
                                     return (
                                         <FadeIn key={el.id}>
                                             <div className="flex flex-col items-center w-full mb-10">
                                                 <div className="flex flex-col item-center max-w-[36rem]">
                                                     <div className='relative w-full max-w-[43rem] max-h-[36rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
-                                                        <div className="cursor-pointer z-10 absolute top-4 right-4 lg:top-8 lg:right-8 rounded-full bg-white text-zinc-800 h-16 w-16 lg:h-24 lg:w-24 p-3 flex justify-center  hover:bg-pink-600 hover:text-zinc-100 ease-in-out duration-200">
+                                                        <Link href={`/programs/${el.path}`}  className="cursor-pointer z-10 absolute top-4 right-4 lg:top-8 lg:right-8 rounded-full bg-white text-zinc-800 h-16 w-16 lg:h-24 lg:w-24 p-3 flex justify-center  hover:bg-pink-600 hover:text-zinc-100 ease-in-out duration-200">
                                                             <ArrowRightIcon className="font-bold m-auto p-1 h-10 w-auto -rotate-45" />
-                                                        </div>
-                                                        <img className='cursor-pointer relative w-full' src={`/upfolio_programs/capacity_development/${el.image}`} alt=''/>
+                                                        </Link>
+                                                        <Link href={`/programs/${el.path}`} >
+                                                            <img className='cursor-pointer relative w-full' src={`/upfolio_programs/${programData.category}/${el.image}`} alt=''/>
+                                                        </Link>
                                                     </div>
                                                     <div className="flex flex-col jw-full">
-                                                        <h3 className='text-xl md:text-2xl lg:text-3xl text-zinc-300 max-w-max my-3 lg:my-7'>
+                                                        <Link href={`/programs/${el.path}`}  className='text-xl md:text-2xl lg:text-3xl text-zinc-300 max-w-max my-3 lg:my-7 hover:text-pink-500 ease-in-out duration-200 cursor-pointer'>
                                                             {el.title}
-                                                        </h3>
+                                                        </Link>
                                                         <p className="text-sm font-normal text-zinc-400 mb-5">
                                                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda voluptatem optio perferendis et consectetur.
                                                         </p>

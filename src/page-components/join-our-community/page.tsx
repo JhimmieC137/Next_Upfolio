@@ -22,7 +22,7 @@ export default function JOCPage() {
                         <FadeIn>
                             <div className="mb-8 md:mb-2 text-center sm:mb-10 lg:mb-3 flex justify-center">
                                 <p className="text-md  text-zinc-200 font-light">
-                                    Home/Join-Our-Community
+                                    Home / Join-Our-Community
                                 </p>
                             </div>
                         </FadeIn>
