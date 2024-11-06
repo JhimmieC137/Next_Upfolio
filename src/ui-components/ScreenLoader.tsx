@@ -1,4 +1,4 @@
-export default function ScreenLoader({loaded} : {loaded: boolean}) {
+export default function ScreenLoader({loaded} : {loaded?: boolean}) {
     return (
         // <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
         <div className={`${loaded? 'disappear' : ''} preloader-animation`}>

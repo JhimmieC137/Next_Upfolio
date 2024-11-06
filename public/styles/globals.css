@@ -1,3 +1,4 @@
+/* @import '@radix-ui/colors/styles.css'; if needed */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -175,5 +176,37 @@ div a:focus{
   100% {
       transform: scale(0.95);
       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
+
+.toast[data-state="open"] {
+  animation: slide-in 200ms ease;
+}
+
+.toast[data-state="closed"] {
+  animation: slide-out 200ms ease;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
   }
 }
