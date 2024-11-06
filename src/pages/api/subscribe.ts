@@ -25,10 +25,10 @@ const subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
       email_address: email,
       status: "subscribed",
       merge_fields: {
-        FNAME: firstName,
-        LNAME: lastName,
-        MMERGE6: phone,
-        MMERGE7: date,
+        FNAME: firstName??'',
+        LNAME: lastName??'',
+        MMERGE6: phone??'',
+        MMERGE7: date??'',
       }
     });
 

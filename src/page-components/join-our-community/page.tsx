@@ -18,7 +18,6 @@ export default function JOCPage() {
     const [lastName, setLastName] = useState<string>('');
     const [date, setDate] = useState<string>('');
     const [phone, setPhone] = useState<string>('');
-    const [message, setMessage] = useState<string>('');
     const [isSent, setIsSent] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -39,8 +38,6 @@ export default function JOCPage() {
                 date: `${Number(selectedMonth) < 10 && '0'}${selectedMonth}/${Number(date) < 10 && '0'}${date}`, 
             }),
         });
-        
-        const result = await res.json();
         
         if (res.ok) {
             setIsSent(true);
