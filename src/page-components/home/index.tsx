@@ -182,17 +182,17 @@ export default function HomePage() {
                     </div>
                     <div className="flex justify-start w-[70%] md:w-full pr-5 md:pr-0 md:pl-0 xl:pl-20 peer">
                       <div className="flex flex-col justify-start">
-                        <h4 className="max-w-max text-[1.5rem] xl:text-[3.5rem] md:text-[2.6rem] ml-0 text-zinc-300 hover:text-pink-400 ease-in-out duration-500 cursor-pointer">
+                        <Link href={'/projects'} className="max-w-max text-[1.5rem] xl:text-[3.5rem] md:text-[2.6rem] ml-0 text-zinc-300 hover:text-pink-400 ease-in-out duration-500 cursor-pointer">
                           Career Growth Projects
-                        </h4>
+                        </Link>
                         <p className="text-sm md:text-md xl:text-lg mt-1 md:mt-5 text-zinc-400 font-normal max-w-2xl">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi vel, pariatur recusandae expedita repudiandae consequatur eos temporibus amet dolorem
                         </p>
                       </div>
                     </div>
-                    <div className="md:ml-5 max-w-max xl:ml-0 h-full flex justify-center opacity-20 text-zinc-400 peer-has-[h4:hover]:text-pink-400  item-center md:max-w-40 peer-has-[h4:hover]:-rotate-45 peer-has-[h4:hover]:opacity-100 ease-in-out duration-500">
+                    <Link href={'/projects'} className="md:ml-5 max-w-max xl:ml-0 h-full flex justify-center opacity-20 text-zinc-400 peer-has-[h4:hover]:text-pink-400  item-center md:max-w-40 peer-has-[h4:hover]:-rotate-45 peer-has-[h4:hover]:opacity-100 ease-in-out duration-500">
                       <ArrowRightIcon className="m-auto h-10 md:h-10 xl:h-16 w-auto" />
-                    </div>
+                    </Link>
                   </div>
                 </FadeIn>
                 {/* -- End of Service 1 -- */}
@@ -205,17 +205,17 @@ export default function HomePage() {
                     </div>
                     <div className="flex justify-start w-[70%] md:w-full pr-5 md:pr-0 md:pl-0 xl:pl-20 peer">
                       <div className="flex flex-col justify-start">
-                        <h4 className="max-w-max text-[1.5rem] xl:text-[3.5rem] md:text-[2.6rem] ml-0 text-zinc-300 hover:text-pink-400 ease-in-out duration-500 cursor-pointer">
+                        <Link href={'/programs'}className="max-w-max text-[1.5rem] xl:text-[3.5rem] md:text-[2.6rem] ml-0 text-zinc-300 hover:text-pink-400 ease-in-out duration-500 cursor-pointer">
                           Programs &<br/> Information Sessions
-                        </h4>
+                        </Link>
                         <p className="text-sm md:text-md xl:text-lg mt-1 md:mt-5 text-zinc-400 font-normal max-w-2xl">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi vel, pariatur recusandae expedita repudiandae consequatur eos temporibus amet dolorem
                         </p>
                       </div>
                     </div>
-                    <div className="md:ml-5 max-w-max xl:ml-0 h-full flex justify-center opacity-20 text-zinc-400 peer-has-[h4:hover]:text-pink-400  item-center md:max-w-40 peer-has-[h4:hover]:-rotate-45 peer-has-[h4:hover]:opacity-100 ease-in-out duration-500">
+                    <Link href={'/programs'} className="md:ml-5 max-w-max xl:ml-0 h-full flex justify-center opacity-20 text-zinc-400 peer-has-[h4:hover]:text-pink-400  item-center md:max-w-40 peer-has-[h4:hover]:-rotate-45 peer-has-[h4:hover]:opacity-100 ease-in-out duration-500">
                       <ArrowRightIcon className="m-auto h-10 md:h-10 xl:h-16 w-auto" />
-                    </div>
+                    </Link>
                   </div>
                 </FadeIn>
                 {/* -- End of Service 2 -- */}
@@ -228,17 +228,17 @@ export default function HomePage() {
                     </div>
                     <div className="flex justify-start w-[70%] md:w-full pr-5 md:pr-0 md:pl-0 xl:pl-20 peer">
                       <div className="flex flex-col justify-start">
-                        <h4 className="max-w-max text-[1.5rem] xl:text-[3.5rem] md:text-[2.6rem] ml-0 text-zinc-300 hover:text-pink-400 ease-in-out duration-500 cursor-pointer">
+                        <Link  href={'/blogs'} className="max-w-max text-[1.5rem] xl:text-[3.5rem] md:text-[2.6rem] ml-0 text-zinc-300 hover:text-pink-400 ease-in-out duration-500 cursor-pointer">
                           Blogs & Articles
-                        </h4>
+                        </Link>
                         <p className="text-sm md:text-md xl:text-lg mt-1 md:mt-5 text-zinc-400 font-normal max-w-2xl">
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum sequi vel, pariatur recusandae expedita repudiandae consequatur eos temporibus amet dolorem
                         </p>
                       </div>
                     </div>
-                    <div className="md:ml-5 max-w-max xl:ml-0 h-full flex justify-center opacity-20 text-zinc-400 peer-has-[h4:hover]:text-pink-400  item-center md:max-w-40 peer-has-[h4:hover]:-rotate-45 peer-has-[h4:hover]:opacity-100 ease-in-out duration-500">
+                    <Link href={'/blogs'} className="md:ml-5 max-w-max xl:ml-0 h-full flex justify-center opacity-20 text-zinc-400 peer-has-[h4:hover]:text-pink-400  item-center md:max-w-40 peer-has-[h4:hover]:-rotate-45 peer-has-[h4:hover]:opacity-100 ease-in-out duration-500">
                       <ArrowRightIcon className="m-auto h-10 md:h-10 xl:h-16 w-auto" />
-                    </div>
+                    </Link>
                   </div>
                 </FadeIn>
                 {/* End of Service 3 -- */}
@@ -351,18 +351,6 @@ export default function HomePage() {
                         </div>
                       </div>
                     </div>
-                    {/* <ScrollProgressBar 
-                      barHeight="100%" 
-                      barWidth="50px" 
-                    /> */}
-                    {/* <div className="relative flex justify-center item-center mx-5 h-5 w-full rotate-90">
-                      <ProgressBar 
-                        color1 = "white" 
-                        color2 = "black"
-                        height   = "10px"
-                        position = "fixed" 
-                      />
-                    </div> */}
                     <div className="w-full max-w-[32rem] text-left mr-0 mt-10 md:mt-0 md:mr-7">
                       <div className='flex justify-center md:justify-start '>
                         <BlitzImage
@@ -403,18 +391,6 @@ export default function HomePage() {
                         </div>
                       </div>
                     </div>
-                    {/* <ScrollProgressBar 
-                      barHeight="100%" 
-                      barWidth="50px" 
-                    /> */}
-                    {/* <div className="relative flex justify-center item-center mx-5 h-5 w-full rotate-90">
-                      <ProgressBar 
-                        color1 = "white" 
-                        color2 = "black"
-                        height   = "10px"
-                        position = "fixed" 
-                      />
-                    </div> */}
                     <div className="w-full max-w-[32rem] text-left ml-0 mt-10 md:mt-0 md:ml-7">
                       <div className='flex justify-center md:justify-end'>
                         <BlitzImage
@@ -632,7 +608,7 @@ export default function HomePage() {
                   {
                     blogData.map((blog) => (
                       <FadeIn key={blog.id}>
-                        <div className="flex flex-col item-center max-w-[43rem] peer">
+                        <Link href={blog.link} className="flex flex-col item-center max-w-[43rem] peer">
                           <div className='w-full max-w-[43rem] max-h-[23rem] md:max-h-[13.5rem] lg:max-h-[23rem] xl:rounded-[2rem] rounded-[1rem] mb-3 overflow-hidden'>
                             <img className='w-full' src={`/webp/${blog.img}`} alt={`${blog.title}`}/>
                           </div>
@@ -656,7 +632,7 @@ export default function HomePage() {
                               <ArrowRightIcon className="m-auto p-1 w-8 lg:w-10 h-auto" />
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       </FadeIn>
                     ))
                   }

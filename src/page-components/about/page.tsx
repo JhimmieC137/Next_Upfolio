@@ -1,11 +1,10 @@
 'use client'
 
-import { CiLinkedin } from "react-icons/ci";
 import { MdOutlineAlternateEmail } from "react-icons/md";
 import { PiChartLineUp } from "react-icons/pi";
 import { RiSeedlingFill, RiServiceFill } from "react-icons/ri";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { teamMembers } from "@/contexts/team-context";
 import NumberCounter from "@/lib/NumberCounter";
 import { FaLinkedinIn } from "react-icons/fa6";

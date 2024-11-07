@@ -3,6 +3,7 @@
 import Footer from '@/ui-components/footer';
 import Header from '@/ui-components/header';
 import ScreenLoader from '@/ui-components/ScreenLoader';
+import { Toaster } from '@/ui-components/Toast/toaster';
 import TsParticles from '@/ui-components/TsParticles';
 import React, { useEffect, useState } from 'react';
 
@@ -25,6 +26,7 @@ export default function MainLayout({ children } : { children: React.ReactNode })
         <div className='flex flex-col justify-between items-center w-full'>
           {children}
         </div>
+        <Toaster />
       </div>
     </>
   );
