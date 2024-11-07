@@ -1,6 +1,7 @@
 import { blogData } from "@/contexts/blog-context"
 import FadeIn from "@/ui-components/FadeIn"
 import { ArrowRightIcon } from "@heroicons/react/24/outline"
+import Link from "next/link"
 import { LuDot } from "react-icons/lu"
 
 export default function BlogsPage() {
@@ -65,7 +66,7 @@ export default function BlogsPage() {
                                 blogData.map(el => {
                                     return (
                                         <FadeIn key={el.id}>
-                                            <div className="flex flex-col items-center w-full mb-16">
+                                            <Link href={el.link} className="flex flex-col items-center w-full mb-16">
                                                 <div className="flex flex-col item-center max-w-[36rem]">
                                                     <div className='relative w-full max-w-[43rem] max-h-[23rem] md:max-h-[13.8rem] lg:max-h-[23rem] xl:rounded-[2rem] rounded-[0.85rem] mb-3 overflow-hidden'>
                                                         <div className="cursor-pointer z-10 absolute top-4 right-4 lg:top-8 lg:right-8 rounded-full bg-white text-zinc-800 h-16 w-16 lg:h-24 lg:w-24 p-3 flex justify-center  hover:bg-pink-600 hover:text-zinc-100 ease-in-out duration-200">
@@ -97,7 +98,7 @@ export default function BlogsPage() {
                                                         {el.mins} mins read
                                                     </h2>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         </FadeIn>
                                     )
                                 })
