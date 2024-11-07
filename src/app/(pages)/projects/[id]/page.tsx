@@ -24,7 +24,7 @@ export default function Projects() {
       <ScreenLoader loaded={!isLoading}/>
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
-        <SingleProjectPage path={projectPath.id as string}/>
+        <SingleProjectPage path={projectPath?.id as string}/>
         <Footer />
       </div>
     </>

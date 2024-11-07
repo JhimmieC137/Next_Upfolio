@@ -24,7 +24,7 @@ export default function Programs() {
       <ScreenLoader loaded={!isLoading}/>
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
-        <SingleProgramPage path={programPath.id as string} />
+        <SingleProgramPage path={programPath?.id as string} />
         <Footer />
       </div>
     </>
