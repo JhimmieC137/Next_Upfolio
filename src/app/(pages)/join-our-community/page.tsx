@@ -4,6 +4,7 @@ import JOCPage from "@/page-components/join-our-community/page";
 import Footer from "@/ui-components/footer";
 import Header from "@/ui-components/header";
 import ScreenLoader from "@/ui-components/ScreenLoader";
+import ScrollUpButton from "@/ui-components/ScrollUpButton";
 import { useEffect, useState } from "react";
 
 export default function JoinOurCommunity() {
@@ -23,6 +24,7 @@ export default function JoinOurCommunity() {
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
         <JOCPage />
+        <ScrollUpButton />
         <Footer />
       </div>
     </>

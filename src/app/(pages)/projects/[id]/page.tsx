@@ -6,6 +6,7 @@ import SingleProjectPage from "@/page-components/projects/single/page";
 import ScreenLoader from "@/ui-components/ScreenLoader";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import ScrollUpButton from "@/ui-components/ScrollUpButton";
 
 export default function Projects() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -25,6 +26,7 @@ export default function Projects() {
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
         <SingleProjectPage path={projectPath?.id as string}/>
+        <ScrollUpButton />
         <Footer />
       </div>
     </>

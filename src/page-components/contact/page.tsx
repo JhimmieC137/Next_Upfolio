@@ -29,8 +29,8 @@ export default function ContactPage() {
 
                     <section className="relative mx-auto max-w-2xl md:max-w-[52rem] mt-5 md:mt-20 xl:mt-0 lg:max-w-[1300px] flex flex-col lg:flex-row justify-between gap-10">
                         <FadeIn>
-                            <div className="w-full px-3 lg:px-0 lg:w-[83%] flex justify-center lg:justify-end">
-                                <img className="w-full lg:w-[93%] rounded-[1rem]" src="/jpg/contact.jpg" alt="contact_us"/>
+                            <div className="w-full px-3 lg:px-0 lg:w-full flex justify-center lg:justify-end">
+                                <img className="w-full lg:max-h-[41rem] lg:w-auto rounded-[1rem]" src="/jpg/contact.jpg" alt="contact_us"/>
                             </div>
                         </FadeIn>
                         <FadeIn>

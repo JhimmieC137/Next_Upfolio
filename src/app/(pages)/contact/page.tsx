@@ -4,6 +4,7 @@ import ContactPage from "@/page-components/contact/page";
 import Footer from "@/ui-components/footer";
 import Header from "@/ui-components/header";
 import ScreenLoader from "@/ui-components/ScreenLoader";
+import ScrollUpButton from "@/ui-components/ScrollUpButton";
 import { useEffect, useState } from "react";
 
 export default function Contact() {
@@ -23,6 +24,7 @@ export default function Contact() {
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
         <ContactPage />
+        <ScrollUpButton />
         <Footer />
       </div>
     </>

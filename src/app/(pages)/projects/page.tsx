@@ -4,6 +4,7 @@ import ProjectsPage from "@/page-components/projects/page";
 import Footer from "@/ui-components/footer";
 import Header from "@/ui-components/header";
 import ScreenLoader from "@/ui-components/ScreenLoader";
+import ScrollUpButton from "@/ui-components/ScrollUpButton";
 import { useEffect, useState } from "react";
 
 export default function Projects() {
@@ -23,6 +24,7 @@ export default function Projects() {
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
         <ProjectsPage/>
+        <ScrollUpButton />
         <Footer />
       </div>
     </>

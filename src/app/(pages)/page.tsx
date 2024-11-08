@@ -4,6 +4,7 @@ import HomePage from "@/page-components/home";
 import Footer from "@/ui-components/footer";
 import Header from "@/ui-components/header";
 import ScreenLoader from "@/ui-components/ScreenLoader";
+import ScrollUpButton from "@/ui-components/ScrollUpButton";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <div className={`${isLoading && 'hidden'} w-full`}>
         <Header />
         <HomePage />
+        <ScrollUpButton />
         <Footer />
       </div>
     </>
